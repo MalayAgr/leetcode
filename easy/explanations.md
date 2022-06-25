@@ -113,9 +113,9 @@ Thus, the total complexity is $\mathcal{O}(n\log{}n)$.
 
 Initialize an empty dictionary which will map elements of the array to their index.
 
-For each element $a$ in the array, calculate $b=target-a$. Check if $b$ exists in the array and if it does, return the index of $a$ and $b$.
+For each element $a$ in the array, calculate $b=target-a$. Check if $b$ exists in the dictionary and if it does, return the index of $a$ and $b$.
 
-Either way, add $a$ with its index to the dictionary.
+Otherwise, add $a$ with its index to the dictionary.
 
 #### Implementation details
 
