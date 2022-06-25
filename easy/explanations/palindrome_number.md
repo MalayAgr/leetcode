@@ -1,5 +1,7 @@
 # <!-- omit in toc --> Problem 2 - Palindrome Number
 
+> Leetcode Link: [Palindrome Number](https://leetcode.com/problems/palindrome-number).
+
 - [Statement](#statement)
 - [Examples](#examples)
 - [Solution 1 - Convert Number to a String](#solution-1---convert-number-to-a-string)

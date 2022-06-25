@@ -1,5 +1,7 @@
 # <!-- omit in toc --> Problem 1: Two Sum
 
+> Leetcode Link: [Two Sum](https://leetcode.com/problems/two-sum).
+
 - [Statement](#statement)
 - [Examples](#examples)
 - [Solution 1 - Use Binary Search](#solution-1---use-binary-search)
