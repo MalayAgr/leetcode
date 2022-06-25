@@ -11,7 +11,6 @@
   - [Example](#example-1)
   - [Time Complexity](#time-complexity-1)
 
-
 ## Statement
 
 Given an integer `x`, return true if `x` is palindrome integer.
