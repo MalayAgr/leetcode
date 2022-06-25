@@ -1,3 +1,10 @@
+import sys
+
+sys.path.insert(0, "path/to/folder")
+
+from src.utils import Trie
+
+
 def longest_common_prefix_sol1(strs: list[str]) -> str:
     if len(strs) == 0:
         return ""
@@ -10,3 +17,27 @@ def longest_common_prefix_sol1(strs: list[str]) -> str:
                 return first[:idx]
 
     return first
+
+
+def longest_common_prefix_sol2(strs: list[str]) -> str:
+    trie = Trie.fromarray(keys=strs)
+
+    node = trie.root
+
+    prefix = ""
+
+    while node.n_children() == 1 and node.is_leaf is False:
+        node = node.last_child()
+        if node.value is not None:
+            prefix += node.value
+
+    return prefix
+
+
+if __name__ == "__main__":
+
+    strs = ["flower", "flow", "flight"]
+
+    print(longest_common_prefix_sol1(strs=strs))
+
+    print(longest_common_prefix_sol2(strs=strs))
