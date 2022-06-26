@@ -25,7 +25,7 @@ def roman_to_int(s: str) -> int:
         increment = 1
         value = VALUES[digit]
 
-        if digit in ("I", "X", "C") and i != limit:
+        if digit in BEFORE and i != limit:
             next_digit = s[i + 1]
             if next_digit in BEFORE[digit]:
                 value = VALUES[next_digit] - value
