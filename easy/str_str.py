@@ -1,7 +1,7 @@
 import string
 import sys
 
-sys.path.insert(0, "/media/malay_agarwal/New Volume/Coding/Python/leetcode/")
+sys.path.insert(0, "path/to/folder")
 
 import src.utils as utils
 
