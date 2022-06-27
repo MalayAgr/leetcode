@@ -23,13 +23,11 @@ Open brackets must be closed in the correct order.
 ```block
 Input: s = "()"
 Output: true
-Example 2:
 ```
 
 ```block
 Input: s = "()[]{}"
 Output: true
-Example 3:
 ```
 
 ```block

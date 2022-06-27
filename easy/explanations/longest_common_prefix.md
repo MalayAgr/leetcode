@@ -26,7 +26,6 @@ If there is no common prefix, return an empty string `""`.
 ```block
 Input: strs = ["flower","flow","flight"]
 Output: "fl"
-Example 2:
 ```
 
 ```block
