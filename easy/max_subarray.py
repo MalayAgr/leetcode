@@ -10,3 +10,9 @@ def maximum_subarray(nums: list[int]) -> int:
         total = max(total, 0)
 
     return max_sum
+
+
+if __name__ == "__main__":
+    nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+
+    print(maximum_subarray(nums=nums))
