@@ -145,7 +145,6 @@ Then, starting at the root node, traverse the tree while the current node has a 
 
 Return the final prefix at the end.
 
-
 ### Implementation Details
 
 When the `value` argument is not provided to the insertion procedure and the string being inserted is not empty, `x.value` is set to the last character.
@@ -170,7 +169,6 @@ def trie_insert(
     x.value = value
     x.is_leaf = True
 ```
-
 
 ### Example
 
