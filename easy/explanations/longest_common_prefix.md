@@ -100,7 +100,9 @@ strs = ["flower","flow","flight"]
 
 The solution loops over each character in the first string and for each character, loops over the list of remaining strings.
 
-In general, the time-complexity is $\mathcal{O}(S)$, where $S=\sum_{i=0}^{n-1} len(strs[i])$.
+In general, the time-complexity is $\mathcal{O}(S)$, where
+
+$$S=\sum_{i=0}^{n-1} len(strs[i])$$
 
 In the worst-case, all $n$ strings have the same length $m$, giving a complexity of $\mathcal{O}(n*m)$.
 
@@ -199,7 +201,7 @@ strs = ["flower","flow","flight"]
 
 ### Time complexity
 
-The trie can be built in time $\mathcal{O}(S)$, where $S=\sum_{i=0}^{n-1} len(strs[i])$.
+The trie can be built in time $\mathcal{O}(S)$, where $S$ is defined same as above.
 
 In the worst-case, all $n$ strings are equal and have the same length $m$. Thus, $S=n*m$ and the trie will be traversed to a depth of $m$. This gives an overall worst-case time complexity of $\mathcal{O}(n*m)$.
 
