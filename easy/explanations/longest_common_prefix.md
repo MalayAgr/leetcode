@@ -39,6 +39,8 @@ Explanation: There is no common prefix among the input strings.
 
 ### Concept
 
+> **Assertion**: If two or more strings have a common prefix, then they have the same character at the same index until the end of the of common prefix.
+
 Take the first string.
 
 For each character in the first string, compare the corresponding character in the remaining strings. If any of the strings do not have the matching character, return a slice of the first string upto one less than the index of the character.
