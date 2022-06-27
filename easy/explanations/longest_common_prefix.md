@@ -100,10 +100,9 @@ strs = ["flower","flow","flight"]
 
 The solution loops over each character in the first string and for each character, loops over the list of remaining strings.
 
-In general, the time-complexity is $\mathcal{O}(S)$ where
-$$S=\sum _ {i = 0}^{n - 1} len(strs[i])$$
+In general, the time-complexity is $\mathcal{O}(S)$ where $S$ is the sum of lengths of all strings.
 
-In the worst-case, all $n$ strings have the same length $m$, giving a complexity of $\mathcal{O}(n*m)$.
+In the worst-case, all $n$ strings have the same length $m$, giving a complexity of $\mathcal{O}(n*m).$
 
 In the best case, the time complexity is $\mathcal{O}(n*m_{min})$, where $m_{min}$ is the minimum length of a string.
 
