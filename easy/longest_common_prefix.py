@@ -28,8 +28,7 @@ def longest_common_prefix_sol2(strs: list[str]) -> str:
 
     while node.n_children() == 1 and node.is_leaf is False:
         node = node.last_child()
-        if node.value is not None:
-            prefix += node.value
+        prefix += node.value
 
     return prefix
 

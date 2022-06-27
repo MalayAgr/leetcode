@@ -71,7 +71,7 @@ class Trie:
         if value is None and len(key) != 0:
             value = char
 
-        current_node.value = value or char
+        current_node.value = value
         current_node.is_leaf = True
 
     def search(self, key: str) -> Node | None:
