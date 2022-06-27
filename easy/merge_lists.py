@@ -11,14 +11,8 @@ def merge_sorted_lists(list_a: ListNode | None, list_b: ListNode | None):
     curr_a = list_a
     curr_b = list_b
 
-    if curr_a is None and curr_b is not None:
+    if curr_a is None:
         return curr_b
-
-    if curr_a is not None and curr_b is None:
-        return curr_a
-
-    if curr_a is None and curr_b is None:
-        return None
 
     result = ListNode(-1)
     curr_res = result
