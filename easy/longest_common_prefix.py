@@ -2,7 +2,7 @@ import sys
 
 sys.path.insert(0, "path/to/folder")
 
-from src.utils import Trie
+from src.ds import Trie
 
 
 def longest_common_prefix_sol1(strs: list[str]) -> str:

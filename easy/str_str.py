@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, "path/to/folder")
 
-import src.utils as utils
+import src.algos as algos
 
 alphabet = string.ascii_lowercase
 
@@ -17,7 +17,7 @@ def str_str_sol1(haystack: str, needle: str) -> int:
     if not needle:
         return 0
 
-    return utils.naive_matcher(text=haystack, pattern=needle, first_only=True)
+    return algos.naive_matcher(text=haystack, pattern=needle, first_only=True)
 
 
 def str_str_sol2(haystack: str, needle: str) -> int:
@@ -33,7 +33,7 @@ def str_str_sol2(haystack: str, needle: str) -> int:
     if not needle:
         return 0
 
-    return utils.automata_matcher(text=haystack, pattern=needle, first_only=True)
+    return algos.automata_matcher(text=haystack, pattern=needle, first_only=True)
 
 
 def str_str_sol3(haystack: str, needle: str) -> int:
@@ -43,7 +43,7 @@ def str_str_sol3(haystack: str, needle: str) -> int:
     if not needle:
         return 0
 
-    return utils.kmp_matcher(text=haystack, pattern=needle, first_only=True)
+    return algos.kmp_matcher(text=haystack, pattern=needle, first_only=True)
 
 
 if __name__ == "__main__":
