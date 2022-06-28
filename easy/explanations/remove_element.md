@@ -116,8 +116,10 @@ val = 2
     - `i = 3 + 1 = 4`
     - `k = 4 + 1 = 5`
     - Exchange `nums[4]` with `nums[6]` so that `nums = [0, 1, 3, 0, 4, 2, 2, 2]`
-- Exchange `nums[5]` with `nums[-1]` so that `nums = [0, 1, 3, 0, 4, 2, 2, 2]`.
-- Return `k = 5`.
+- Exchange `nums[5]` with `nums[-1]` so that `nums = [0, 1, 3, 0, 4, 2, 2, 2]`
+- Return `k = 5`
+
+At the end, `nums = [0, 1, 3, 0, 4, 2, 2, 2]`.
 
 ### Time Complexity
 
