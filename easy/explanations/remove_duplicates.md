@@ -61,7 +61,7 @@ Finally, return $k$.
 **Input**
 
 ```block
-nums = [0,0,1,1,1,2,2,3,3]
+nums = [0,0,1,1,1,2,2,3,3,4]
 ```
 
 **Procedure**
@@ -108,9 +108,16 @@ nums = [0,0,1,1,1,2,2,3,3]
   - `i = 8`
   - `val = nums[8] = 3`
   - Since `val == curr`, `count = 4 + 1 = 5`.
-- Return `k = 4`.
+- Iteration 9:
+  - `i = 9`
+  - `val = nums[9] = 4`
+  - Since `val != curr`:
+    - `nums[i - count] = nums[4] = 4` so that `nums = [0, 1, 2, 3, 4, 2, 2, 3, 3]`.
+    - `curr = 4`.
+    - `k = 4 + 1 = 5`.
+- Return `k = 5`.
 
-At the end, `nums = [0, 1, 2, 3, 1, 2, 2, 3, 3]`.
+At the end, `nums = [0, 1, 2, 3, 4, 2, 2, 3, 3, 4]`.
 
 ### Time Complexity
 
