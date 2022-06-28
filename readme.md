@@ -2,6 +2,9 @@
 
 Solutions to problems on the online competitive platform, [LeetCode](https://leetcode.com/).
 
+- [Difficulty Level](#difficulty-level)
+  - [Easy](#easy)
+
 ## Difficulty Level
 
 ### Easy
