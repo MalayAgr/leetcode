@@ -1,4 +1,4 @@
-# <!-- omit in toc --> Problem 1: Two Sum
+# <!-- omit in toc --> Problem 1 - Two Sum
 
 > Leetcode Link: [Two Sum](https://leetcode.com/problems/two-sum).
 

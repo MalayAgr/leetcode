@@ -6,8 +6,8 @@ Solutions to problems on the online competitive platform, [LeetCode](https://lee
 
 ### Easy
 
-- [Problem 1: Two Sum](./easy/two_sum.py)
-- [Problem 2: Palindrome Number](./easy/palindrome_number.py)
+- [Problem 1 - Two Sum](./easy/two_sum.py)
+- [Problem 2 - Palindrome Number](./easy/palindrome_number.py)
 - [Problem 3 - Roman to Integer](./easy/roman_to_integer.py)
 - [Problem 4 - Longest Common Prefix](./easy/longest_common_prefix.py)
 - [Problem 5 - Valid Parentheses](./easy/valid_parens.py)

@@ -1,4 +1,4 @@
-# <!-- omit in toc --> Problem 5: Valid Parentheses
+# <!-- omit in toc --> Problem 5 - Valid Parentheses
 
 > Leetcode Link: [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/).
 
