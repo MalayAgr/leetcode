@@ -1,6 +1,13 @@
-# Problem 6 - Remove Duplicates from Sorted Array
+# <!-- omit in toc --> Problem 6 - Remove Duplicates from Sorted Array
 
 > Leetcode Link: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/).
+
+- [Statement](#statement)
+- [Examples](#examples)
+- [Solution - Use Consecutive Nature of Duplicates](#solution---use-consecutive-nature-of-duplicates)
+  - [Concept](#concept)
+  - [Example](#example)
+  - [Time Complexity](#time-complexity)
 
 ## Statement
 
