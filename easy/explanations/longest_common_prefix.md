@@ -40,15 +40,21 @@ Explanation: There is no common prefix among the input strings.
 
 > **Assertion**: If two or more strings have a common prefix, then they have the same character at the same index until the end of the of common prefix.
 
-Take the first string.
+Let $\text{first}$ be the first string in $\text{strs}$.
 
-For each character in the first string, compare the corresponding character in the remaining strings. If any of the strings do not have the matching character, return a slice of the first string upto one less than the index of the character.
+For each character $\text{first[i]}$ in the first string and for each string $\text{string}$ in the remaining strings:
 
-If no return occurs in this loop, return the first string since the first string is the longest common prefix.
+- If $\text{string[i]} \not ={\text{first[i]}}$, return $\text{first}[:i]$
+
+If no return occurs in this loop, return $\text{first}$ since it is the longest common prefix.
 
 ### Implementation Details
 
-It may be that a string in the remaining strings is smaller than the first string. In this case, we do not need to compare any more strings since the longest common prefix cannot be longer than the length of the smallest string. Thus, the actual return condition in the loop checks:
+It may be that a string in the remaining strings is smaller than the first string.
+
+In this case, we do not need to compare any more strings since the longest common prefix cannot be longer than the length of the smallest string.
+
+Thus, the actual return condition in the loop checks:
 
 - Index of the current character is `>=` length of the current string or,
 - The current character does not match the corresponding character in the current string.
@@ -69,31 +75,35 @@ strs = ["flower","flow","flight"]
 
 **Procedure**
 
-- `first = flower`, `remaining = ["flow", "flight"]`
+- $\text{first} = \text{flower}$
+- $\text{remaining} = [\text{flow}, \text{flight}]$
 - Iteration 1:
-  - `idx = 0`, `char = f`
+  - $i = 0$
+  - $\text{char} = f$
   - Iteration 1:
-    - `string = flow`
-    - Since `idx` is not `>= len(flow)` and `string[0] == f`, no return occurs.
+    - $\text{string} = \text{flow}$
+    - Since $i \lt len(\text{flow})$ and $\text{string}[0] = f$, continue
   - Iteration 2:
-    - `string = flight`
-    - Since `idx` is not `>= len(string)` and `string[0] == f`, no return occurs.
+    - $\text{string} = \text{flight}$
+    - Since $i \lt len(\text{string})$ and $\text{string}[0] = f$, continue
 - Iteration 2:
-  - `idx = 1`, `char = l`
+  - $i = 1$
+  - $\text{char} = l$
   - Iteration 1:
-    - `string = flow`
-    - Since `idx` is not `>= len(flow)` and `string[1] == l`, no return occurs.
+    - $\text{string} = \text{flow}$
+    - Since $i \lt len(\text{flow})$ and $\text{string}[1] = l$, continue
   - Iteration 2:
-    - `string = flight`
-    - Since `idx` is not `>= len(string)` and `string[1] == l`, no return occurs.
+    - $\text{string} = \text{flight}$
+    - Since $i \lt len(\text{string})$ and $\text{string}[1] = l$, continue
 - Iteration 3:
-  - `idx = 2`, `char = o`
+  - $i = 2$
+  - $\text{char} = o$
   - Iteration 1:
-    - `string = flow`
-    - Since `idx` is not `>= len(flow)` and `string[2] == o`, no return occurs.
+    - $\text{string} = \text{flow}$
+    - Since $i \lt len(\text{flow})$ and $\text{string}[2] = o$, continue
   - Iteration 2:
-    - `string = flight`
-    - Since `idx` is not `>= len(string)` but `string[2] != o` (`string[2] = i`), return `first[:idx] = fl`.
+    - $\text{string} = \text{flight}$
+    - Since $i \lt len(\text{string})$ but $\text{string}[2] = i \not = {o}$, return $\text{first}[:2] = fl$.
 
 ### Time complexity
 
@@ -120,7 +130,7 @@ class Node:
     children: dict[int, str]
 ```
 
-First, build a trie for the list of strings by inserting each string one by one in the trie using the standard trie insertion procedure ([source](https://en.wikipedia.org/wiki/Trie#Insertion)):
+Build a trie for the list of strings by inserting each string one by one in the trie using the standard trie insertion procedure ([source](https://en.wikipedia.org/wiki/Trie#Insertion)):
 
 ```python
 def trie_insert(
@@ -140,15 +150,20 @@ def trie_insert(
     x.is_leaf = True
 ```
 
-Initialize an empty string to store the final prefix.
+Let the trie be $\text{trie}$.
 
-Then, starting at the root node, traverse the tree while the current node has a single child and is not a leaf node. For each such node, append the `value` attribute of the only child to the final prefix and change the current node to the only child.
+Initialize $\text{prefix}$ to an empty string. It will store the final prefix.
 
-Return the final prefix at the end.
+Starting at $\text{node}=\text{trie}.\text{root}$, while $\text{node}$ has a single child and is not a leaf node:
+
+- Update $\text{node}$ so that it is now the only child
+- Update $\text{prefix}$ as $\text{prefix} = \text{prefix} + \text{node}.\text{value}$
+
+Return $\text{prefix}$.
 
 ### Implementation Details
 
-When the `value` argument is not provided to the insertion procedure and the string being inserted is not empty, `x.value` is set to the last character.
+When the `value` argument is not provided to the insertion procedure and the string being inserted is not empty, `x.value` at the end of the loop is set to the last character.
 
 ```python
 def trie_insert(
@@ -185,16 +200,16 @@ strs = ["flower","flow","flight"]
 
 ![Example Trie](../../assets/imgs/example_trie.png)
 
-- `prefix = ""`, `node = trie.root`.
+- $\text{prefix} = \epsilon$
+- $\text{node} = \text{trie}.\text{root}$
 - Iteration 1:
-  - Since `node` has a single child and is not a leaf, change `node` to the single child.
-  - `prefix = "" + node.value = f`.
+  - Since $\text{node}$ has a single child and is not a leaf, change $\text{node}$ to the single child
+  - $\text{prefix} = \epsilon + \text{node}.\text{value} = f$
 - Iteration 2:
-  - Since `node` has a single child and is not a leaf, change `node` to the single child.
-  - `prefix = f + node.value = fl`.
-- Iteration 3:
-  - Since `node` has more than one child, stop
-- Return `prefix = fl`.
+  - Since $\text{node}$ has a single child and is not a leaf, change $\text{node}$ to the single child
+  - $\text{prefix} = f + \text{node}.\text{value} = fl$
+- Since $\text{node}$ has more than one child, stop
+- Return $\text{prefix} = fl$
 
 ### Time complexity
 

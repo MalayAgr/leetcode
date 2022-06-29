@@ -59,21 +59,21 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 Create two dictionatries. The first one maps a roman symbol to its numeric value. The second maps `I`, `X` and `C` to their respective pairs.
 
-Create a variable to store the final result, initialized to $0$.
+Initialize $\text{result}$ to $0$. It will store the final result
 
-While an index varible `i` which is initialized to $0$ is less than the length of the roman numeral:
+For each $0 \le i < len(s)$:
 
-- Get the digit at index `i`.
-- Get its value from the value map.
-- Set a variable `increment` as 1.
-- Check if the digit is in the second dictionary as a key.
-  - If it is, check the next digit to see if it is in the corresponding pair.
-    - If it is, set the value to the difference between the values of the two digits.
-    - Change `increment` to 2.
-- Add the value to the result.
-- Increment `i` by `increment`.
+- Get the digit at index $i$
+- Get its value from the value map
+- Set a variable $\text{increment}$ as $1$
+- If the digit is in the second dictionary as a key.
+  - If the next digit is in the corresponding pair.
+    - Set the value to the difference between the values of the two digits
+    - Change $\text{increment}$ to $2$
+- Add the value to $\text{result}$
+- Increment $i$ by $\text{increment}$
 
-Finally, return the result.
+Return $\text{result}$.
 
 ### Example
 
@@ -85,32 +85,45 @@ s = "MCMXCIV"
 
 **Procedure**
 
-Let the maps be called `VALUES` and `SUB_PAIRS`.
+Let the maps be called $\text{VALUES}$ and $\text{SUB\_PAIRS}$.
 
 - Iteration 1:
-  - `digit = s[0] = M`
-  - `value = VALUES["M"] = 1000`, `increment = 1`
-  - Since `M` is not in `SUB_PAIRS`, `result = 0 + 1000 = 1000`
-  - `i = 0 + 1 = 1`
+  - $i = 0$
+  - $\text{digit} = s[0] = M$
+  - $\text{value} = \text{VALUES}[M] = 1000$
+  - $\text{increment} = 1$
+  - Since $M$ is not in $\text{SUB\_PAIRS}$, $\text{result} = 0 + 1000 = 1000$
+  - $i = 0 + 1 = 1$
 - Iteration 2:
-  - `digit = s[1] = C`
-  - `value = VALUES["C"] = 100`, `increment = 1`
-  - Since `C` is in `SUB_PAIRS` and the next digit `M` is in the corresponding pair, `value = VALUES["M"] - 100 = 900`, `increment = 2`
-  - `result = 1000 + 900 = 1900`
-  - `i = 1 + 2 = 3`
+  - $i = 1$
+  - $\text{digit} = s[1] = C$
+  - $value = \text{VALUES}[C] = 100$
+  - $\text{increment} = 1$
+  - Since $C$ is in $\text{SUB\_PAIRS}$ and the next digit $M$ is in the corresponding pair
+    - $\text{value} = \text{VALUES}[M] - 100 = 900$
+    - $\text{increment} = 2$
+  - $\text{result} = 1000 + 900 = 1900$
+  - $i = 1 + 2 = 3$
 - Iteration 3:
-  - `digit = s[3] = X`
-  - `value = VALUES["X"] = 10`, `increment = 1`
-  - Since `X` is in `SUB_PAIRS` and the next digit `C` is in the corresponding pair, `value = VALUES["C"] - 10 = 90`, `increment = 2`
-  - `result = 1900 + 90 = 1990`
-  - `i = 3 + 2 = 5`
+  - $\text{digit} = s[3] = X$
+  - $\text{value} = \text{VALUES}[X] = 10$
+  - $\text{increment} = 1$
+  - Since $X$ is in $\text{SUB\_PAIRS}$ and the next digit $C$ is in the corresponding pair
+    - $\text{value} = \text{VALUES}[C] - 10 = 90$
+    - $\text{increment} = 2$
+  - $\text{result} = 1900 + 90 = 1990$
+  - $i = 3 + 2 = 5$
 - Iteration 4:
-  - `digit = s[5] = I`
-  - `value = VALUES["I"] = 1`, `increment = 1`
-  - Since `I` is in `SUB_PAIRS` and the next digit `V` is in the corresponding pair, `value = VALUES["V"] - 1 = 4`, `increment = 2`
-  - `result = 1990 + 4 = 1994`
-  - `i = 5 + 2 = 7`. This is not less than the length and hence loop ends.
-- Return `result = 1994`.
+  - $\text{digit} = s[5] = I$
+  - $value = \text{VALUES}[I] = 1$
+  - $\text{increment} = 1$
+  - Since $I$ is in $\text{SUB\_PAIRS}$ and the next digit $V$ is in the corresponding pair
+    - $\text{value} = \text{VALUES}[V] - 1 = 4$,
+    - $\text{increment} = 2$
+  - $\text{result} = 1990 + 4 = 1994$
+  - $i = 5 + 2 = 7$.
+- Since $i \ge len(s)$, the loop ends
+- Return $\text{result} = 1994$
 
 ### Time Complexity
 

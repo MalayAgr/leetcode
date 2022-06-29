@@ -62,7 +62,7 @@ x = 121
 
 ### Time Complexity
 
-Since the number is converted to a string and then reversed, the time complexity is $\mathcal{O}(k)$, where $k$ is the number of digits in the number.
+Since the number is converted to a string and then reversed, the time complexity is $\mathcal{O}(n)$, where $n$ is the number of digits in the number.
 
 ## Solution 2 - Construct Reverse Using Mod 10
 
@@ -72,19 +72,21 @@ Since the number is converted to a string and then reversed, the time complexity
 >
 > **Assertion 2**: If a number is divided by $10$, the quotient is the number formed by all digits of the number except the last one. Example: $134\div10=13$.
 >
-> **Assertion 3**. Consider a number $d_1d_2...d_n$, where $d_i$ is a digit of the number. If the reverse of the number so far is $d_nd_{n-1}...d_{i+1}$ and the current digit from the right is $d_i$, then the new reverse is $d_nd_{n-1}...d_{i+1}*10+d_i$.
+> **Assertion 3**. Consider a number $d_1d_2...d_n$, where $d_i$ is a digit of the number. If the reverse of the number so far is $d_nd_{n-1}...d_{i+1}$ and the current digit from the right is $d_i$, then the new reverse $d_nd_{n-1}...d_{i+1}d_i = d_nd_{n-1}...d_{i+1}*10+d_i$.
 
-If $x$ negative, return `False` since no negative number can be a palindrome due to the negative sign.
+If $x \lt 0$, return `False` since no negative number can be a palindrome due to the negative sign.
 
-Otherwise, initialize $reverse$ as $0$ to store the reverse of $x$. Create a copy of $x$ and do the following using the copy:
+Otherwise, initialize $reverse$ as $0$ to store the reverse of $x$.
 
-1. Get the remainder when $x$ is divided by $10$. This will give the last digit of the number.
-2. Update the reverse so that the last digit will be in the correct position. This is done as $reverse=reverse*10+remainder$.
-3. Update $x$ by dividing it by $10$ so that the last digit is dropped.
+Create a copy $temp_x$ of $x$.
 
-Repeat this until the copy becomes $0$. At the end, $reverse$ will have the reverse of $x$.
+While $temp_x \not ={0}$:
 
-Return the result of $reverse==x$.
+- Get the remainder as $remainder = temp_x \bmod 10$
+- Update the reverse as $reverse=reverse*10+remainder$
+- Update $temp_x$ as $temp_x = \lfloor temp_x \div 10 \rfloor$
+
+If $reverse=x$, return `True`. Otherwise, return `False`.
 
 ### Example
 
@@ -96,21 +98,21 @@ x = 121
 
 **Procedure**
 
-- `reverse = 0` and `temp_x = x = 121`.
+- $reverse = 0$ and $temp_x = x = 121$
 - Iteration 1:
-  - `remainder = 121 % 10 = 1`
-  - `reverse = 0 * 10 + 1 = 1`
-  - `temp_x = 121 // 10 = 12`
+  - $remainder = 121 \bmod 10 = 1$
+  - $reverse = 0 * 10 + 1 = 1$
+  - $temp_x = \lfloor 121 \div 10 \rfloor = 12$
 - Iteration 2:
-  - `remainder = 12 % 10 = 2`
-  - `reverse = 1 * 10 + 2 = 12`
-  - `temp_x = 12 // 10 = 1`
+  - $remainder = 12 \bmod 10 = 2$
+  - $reverse = 1 * 10 + 2 = 12$
+  - $temp_x = \lfloor 12 \div 10 \rfloor = 1$
 - Iteration 3:
-  - `remainder = 1 % 10 = 1`
-  - `reverse = 12 * 10 + 1 = 121`.
-  - `temp_x = 1 // 10 = 0`
-- Since `reverse = 121 = x`, return `True`.
+  - $remainder = 1 \bmod 10 = 1$
+  - $reverse = 12 * 10 + 1 = 121$
+  - $temp_x = \lfloor 1 \div 10 \rfloor = 0$
+- Since $reverse = 121 = x$, return `True`
 
 ### Time Complexity
 
-Since the reverse is built one digit at a time, the time complexity is $\mathcal{O}(k)$, where $k$ is the number of digits in the number.
+Since the reverse is built one digit at a time, the time complexity is $\mathcal{O}(n)$, where $n$ is the number of digits in the number.

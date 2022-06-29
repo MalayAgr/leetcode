@@ -42,7 +42,7 @@ Output: false
 > **Assertion 1**: If a string of parentheses is valid and:
 >
 > - Each opening bracket encountered is pushed onto a stack while,
-> - The stack is popped on encountering a closing bracket then,
+> - The stack is popped on encountering a closing bracket,
 >
 > The result of the pop operation is always the opening bracket corresponding to the closing bracket that led to the pop operation. This is due to the nesting nature of brackets.
 >
@@ -69,28 +69,26 @@ s = ([]){}
 
 > Note: TOS is the last element.
 
-Let there be a dictionary `PAREN_MAP` which maps an opening bracket to its closing bracket.
-
 - `stack = []`
 - Iteration 1:
   - Since `(` is an opening bracket, push it onto the stack.
-  - `stack = [(]`.
+  - `stack = [(]`
 - Iteration 2:
   - Since `[` is an opening bracket, push it onto the stack.
-  - `stack = [(, []`.
+  - `stack = [(, []`
 - Iteration 3:
-  - Since `]` is a closing bracket, pop the stack to get `[`, which is the correct opening bracket.
-  - `stack = [(]`.
+  - Since `]` is a closing bracket, pop the stack to get `[`, which is the correct opening bracket
+  - `stack = [(]`
 - Iteration 4:
-  - Since `)` is a closing bracket, pop the stack to get `(`, which is the correct opening bracket.
-  - `stack = []`.
+  - Since `)` is a closing bracket, pop the stack to get `(`, which is the correct opening bracket
+  - `stack = []`
 - Iteration 5:
   - Since `{` is an opening bracket, push it onto the stack.
-  - `stack = [{]`.
+  - `stack = [{]`
 - Iteration 6:
-  - Since `}` is a closing bracket, pop the stack to get `}`, which is the correct opening bracket.
-  - `stack = []`.
-- Since the the stack is empty, return `True`.
+  - Since `}` is a closing bracket, pop the stack to get `}`, which is the correct opening bracket
+  - `stack = []`
+- Since the the stack is empty, return `True`
 
 ### Time Complexity
 
