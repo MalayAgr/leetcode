@@ -52,30 +52,30 @@ class ListNode:
     next: ListNode
 ```
 
-Copy the heads of the two lists. Let these copies be $curr_a$ and $curr_b$ respectively.
+Copy the heads of the two lists. Let these copies be $\text{curr}_a$ and $\text{curr}_b$ respectively.
 
-If $curr_a$ has no elements, return $curr_b$.
+If $\text{curr}_a$ has no elements, return $\text{curr}_b$.
 
-Otherwise, create a new linked list $result$ with a dummy head node with any random value.
+Otherwise, create a new linked list $\text{result}$ with a dummy head node with any value.
 
-Copy the head of $result$. Let the copy be $curr_{res}$.
+Copy the head of $\text{result}$. Let the copy be $\text{curr}_{\text{res}}$.
 
-Until either $curr_a$ or $curr_b$ reach the end of their respective lists, do the following:
+Until either $\text{curr}_a$ or $\text{curr}_b$ reach the end of their respective lists, do the following:
 
-- If $curr_a.val \le curr_b.val$:
-  - Set $curr_{res}.next$ to $curr_a$
-  - Advance $curr_{res}$ to $curr_{res}.next$
-  - Advance $curr_a$ to $curr_a.next$.
+- If $\text{curr}_a.\text{val} \le \text{curr}_b.\text{val}$:
+  - Set $\text{curr}_{\text{res}}.\text{next}$ to $curr_a$
+  - Advance $\text{curr}_{\text{res}}$ to $\text{curr}_{\text{res}}.\text{next}$
+  - Advance $\text{curr}_a$ to $\text{curr}_a.\text{next}$.
 - Otherwise:
-  - Set $curr_{res}.next$ to $curr_b$
-  - Advance $curr_{res}$ to $curr_{res}.next$
-  - Advance $curr_b$ to $curr_b.next$.
+  - Set $\text{curr}_{\text{res}}.\text{next}$ to $\text{curr}_b$
+  - Advance $\text{curr}_{\text{res}}$ to $\text{curr}_{\text{res}}.\text{next}$
+  - Advance $\text{curr}_b$ to $\text{curr}_b.\text{next}$.
 
-Set $curr_{res}.next$ to either $curr_a$ or $curr_b$, whichever hasn't reached the end of its list.
+Set $\text{curr}_{\text{res}}.\text{next}$ to either $\text{curr}_a$ or $\text{curr}_b$, whichever hasn't reached the end of its list.
 
-Since the first node in $result$ is a dummy head node, advance $result$ to $result.next$ so that it is at the correct head node.
+Since the first node in $\text{result}$ is a dummy head node, advance $\text{result}$ to $\text{result}.\text{next}$ so that it is at the correct head node.
 
-Return $result$.
+Return $\text{result}$.
 
 ### Examples
 
@@ -89,28 +89,32 @@ list1 = [1,2,4], list2 = [1,3,4]
 
 **Procedure**
 
-- `curr_a = 1` and `curr_b = 1`.
+- $\text{curr}_a = 1$ and $\text{curr}_b = 1$.
 - Since neither is `None`, continue.
-- `result = -1` and `curr_res = -1`.
-- Iteration 1. Since `curr_a.val = 1 <= curr_b.val = 1`:
-  - Set `curr_res.next = 1`.
-  - Set `curr_res = curr_res.next = 1`.
-  - Set `curr_a = curr_a.next = 2`.
-- Iteration 2. Since `curr_b.val = 1 <= curr_a.val = 2`:
-  - Set `curr_res.next = 1`.
-  - Set `curr_res = curr_res.next = 1`.
-  - Set `curr_b = curr_b.next = 3`.
-- Iteration 3. Since `curr_a.val = 2 <= curr_b.val = 3`:
-  - Set `curr_res.next = 2`.
-  - Set `curr_res = curr_res.next = 2`.
-  - Set `curr_a = curr_a.next = 4`.
-- Iteration 4. Since `curr_b.val = 4 <= curr_a.val = 4`:
-  - Set `curr_res.next = 4`.
-  - Set `curr_res = curr_res.next = 4`.
-  - Set `curr_a = curr_a.next = None`.
-- Since `curr_a` is `None`, set `curr_res.next = curr_b = 4`.
-- Set `result = result.next = 1`
-- Return `result`.
+- $\text{result} = -1$ and $\text{curr}_{\text{res}} = -1$.
+- Iteration 1. Since $\text{curr}_a.\text{val} = 1 \le \text{curr}_b.\text{val} = 1$:
+  - Set $\text{curr}_{\text{res}}.\text{next} = 1$.
+  - Set $\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$.
+  - Set $\text{curr}_a = \text{curr}_a.\text{next} = 2$.
+- Iteration 2. Since $\text{curr}_b.\text{val} = 1 \le \text{curr}_a.\text{val} = 2$:
+  - Set $\text{curr}_{\text{res}}.\text{next} = 1$.
+  - Set $\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$.
+  - Set $\text{curr}_b = \text{curr}_b.\text{next} = 3$.
+- Iteration 3. Since $\text{curr}_a.\text{val} = 2 \le \text{curr}_b.\text{val} = 3$:
+  - Set $\text{curr}_{\text{res}}.\text{next} = 2$.
+  - Set $\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 2$.
+  - Set $\text{curr}_a = \text{curr}_a.\text{next} = 4$.
+- Iteration 4. Since $\text{curr}_b.\text{val} = 4 \le \text{curr}_a.\text{val} = 4$:
+  - Set $\text{curr}_{\text{res}}.\text{next} = 4$.
+  - Set $\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 4$.
+  - Set $\text{curr}_a = \text{curr}_a.\text{next} = \text{None}$.
+- Since $\text{curr}_a$ is `None`, set $\text{curr}_{\text{res}}.\text{next} = \text{curr}_b = 4$.
+- Set $\text{result} = \text{result}.\text{next} = 1$
+- Return $\text{result}$.
+
+$\text{result}$ at the end:
+
+$$1 \rightarrow 1  \rightarrow 2 \rightarrow 3 \rightarrow 4 \rightarrow 4 \rightarrow \text{None}$$
 
 ### Time Complexity
 

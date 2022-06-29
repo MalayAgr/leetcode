@@ -46,13 +46,13 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 >
 > After the partition step, $a[q]$ is at the position it would be in if the array were sorted.
 >
-> For example, if the array is `[3, 6, 4, 2, 1, 5]`, then after partitioning the array will be `[3, 4, 2, 1, 5, 6]`.
+> For example, if the array is $[3, 6, 4, 2, 1, 5]$, then after partitioning the array will be $[3, 4, 2, 1, 5, 6]$.
 >
-> This solution partitions the array around $a[q]=val$ such that:
+> This solution partitions the array around $a[q]=\text{val}$ such that:
 >
 > > Each element in $a[0...q]$ is not equal to $a[q]$ and each element in $a[q+1...n]$ is equal to $a[q]$.
 
-If the last value in $nums$ is not $val$, find the first occurence of $val$ in $nums$ and exchange it with the last element.
+If the last value in $\text{nums}$ is not $\text{val}$, find the first occurence of $\text{val}$ in $\text{nums}$ and exchange it with the last element.
 
 Initialize an index variable $i$ to $-1$. It will always be the index of the last element in the left partition.
 
@@ -60,12 +60,12 @@ Initialize $k$, the return value, to $0$.
 
 For each $0 \le j \lt len(nums)-1$:
 
-- If $nums[j]\not ={val}$:
+- If $\text{nums}[j]\not ={\text{val}}$:
   - Increment $i$ by $1$, thus advancing the end of the left partition by $1$.
   - Increment $k$ by $1$ since a new value has been found.
-  - Exchange $nums[i]$ and $nums[j]$ so that $nums[j]$ is the new last element in the left partition and $nums[i]$ goes to the right partition.
+  - Exchange $\text{nums}[i]$ and $\text{nums}[j]$ so that $\text{nums}[j]$ is the new last element in the left partition and $\text{nums}[i]$ goes to the right partition.
 
-At the end, $i + 1$ is the position where the pivot should be be. So, exchange $nums[i + 1]$ and $nums[-1]$.
+At the end, $i + 1$ is the position where the pivot should be be. So, exchange $\text{nums}[i + 1]$ and $\text{nums}[-1]$.
 
 Return $k$.
 
@@ -80,46 +80,51 @@ val = 2
 
 **Procedure**
 
-- Since `nums[-1] == 2`, no exchange is required.
-- `i = -1`, `k = 0`.
+- Since $\text{nums}[-1] = 2$, no exchange is required.
+- $i = -1$, $k = 0$.
 - Iteration 1:
-  - `j = 0`
-  - Since `nums[0] = 0 != 2`:
-    - `i = -1 + 1 = 0`
-    - `k = 0 + 1 = 1`
-    - Exchange `nums[0]` with `nums[0]` so that `nums = [0, 1, 2, 2, 3, 0, 4, 2]`
+  - $j = 0$
+  - Since $\text{nums}[0] = 0 \not = 2$:
+    - $i = -1 + 1 = 0$
+    - $k = 0 + 1 = 1$
+    - Exchange $\text{nums}[0]$ with $\text{nums}[0]$
+    - Now, $\text{nums} = [0, 1, 2, 2, 3, 0, 4, 2]$
 - Iteration 2:
-  - `j = 1`
-  - Since `nums[1] = 1 != 2`:
-    - `i = 0 + 1 = 1`
-    - `k = 1 + 1 = 2`
-    - Exchange `nums[1]` with `nums[1]` so that `nums = [0, 1, 2, 2, 3, 0, 4, 2]`
+  - $j = 1$
+  - Since $\text{nums}[1] = 1 \not = 2$:
+    - $i = 0 + 1 = 1$
+    - $k = 1 + 1 = 2$
+    - Exchange $\text{nums}[1]$ with $\text{nums}[1]$
+    - Now, $\text{nums} = [0, 1, 2, 2, 3, 0, 4, 2]$
 - Iteration 3:
-  - `j = 2` and since `nums[2] = 2`, continue.
+  - $j = 2$ and since $\text{nums}[2] = 2$, continue.
 - Iteration 4:
-  - `j = 3` and since `nums[3] = 2`, continue.
+  - $j = 3$ and since $\text{nums}[3] = 2$, continue.
 - Iteration 5:
-  - `j = 4`
-  - Since `nums[4] = 3 != 2`:
-    - `i = 1 + 1 = 2`
-    - `k = 2 + 1 = 3`
-    - Exchange `nums[2]` with `nums[4]` so that `nums = [0, 1, 3, 2, 2, 0, 4, 2]`
+  - $j = 4$
+  - Since $\text{nums}[4] = 3 \not = 2$:
+    - $i = 1 + 1 = 2$
+    - $k = 2 + 1 = 3$
+    - Exchange $\text{nums}[2]$ with $\text{nums}[4]$
+    - Now, $\text{nums} = [0, 1, 3, 2, 2, 0, 4, 2]$
 - Iteration 6:
-  - `j = 5`
-  - Since `nums[5] = 0 != 2`:
-    - `i = 2 + 1 = 3`
-    - `k = 3 + 1 = 4`
-    - Exchange `nums[3]` with `nums[5]` so that `nums = [0, 1, 3, 0, 2, 2, 4, 2]`
+  - $j = 5$
+  - Since $\text{nums}[5] = 0 \not = 2$:
+    - $i = 2 + 1 = 3$
+    - $k = 3 + 1 = 4$
+    - Exchange $\text{nums}[3]$ with $\text{nums}[5]$
+    - Now, $\text{nums} = [0, 1, 3, 0, 2, 2, 4, 2]$
 - Iteration 7:
-  - `j = 6`
-  - Since `nums[6] = 4 != 2`:
-    - `i = 3 + 1 = 4`
-    - `k = 4 + 1 = 5`
-    - Exchange `nums[4]` with `nums[6]` so that `nums = [0, 1, 3, 0, 4, 2, 2, 2]`
-- Exchange `nums[5]` with `nums[-1]` so that `nums = [0, 1, 3, 0, 4, 2, 2, 2]`
-- Return `k = 5`
+  - $j = 6$
+  - Since $\text{nums}[6] = 4 \not = 2$:
+    - $i = 3 + 1 = 4$
+    - $k = 4 + 1 = 5$
+    - Exchange $\text{nums}[4]$ with $\text{nums}[6]$
+    - Now, $\text{nums} = [0, 1, 3, 0, 4, 2, 2, 2]$
+- Exchange $\text{nums}[5]$ with $\text{nums}[-1]$
+- Return $k = 5$
 
-At the end, `nums = [0, 1, 3, 0, 4, 2, 2, 2]`.
+At the end, $\text{nums} = [0, 1, 3, 0, 4, 2, 2, 2]$.
 
 ### Time Complexity
 
