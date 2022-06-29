@@ -88,15 +88,15 @@ target = 9
   - $\text{idx} = 0$
   - $a = \text{nums}[0] = 2$
   - $b = 9 - 2 = 7$
-  - Binary search with $\text{low} = 0$, $\text{high} = 3$ and $\text{a\_idx} = 2$:
+  - Binary search with $\text{low} = 0$, $\text{high} = 3$ and $\text{a}_{\text{idx}} = 2$:
     - Iteration 1:
       - $\text{mid} = 1$
-      - $\text{mid\_idx} = \text{indices}[1] = 3$
-      - Since $\text{nums}[\text{mid\_idx}] = 5 < b$, $\text{low} = \text{mid} + 1 = 2$
+      - $\text{mid}_{\text{idx}} = \text{indices}[1] = 3$
+      - Since $\text{nums}[\text{mid}_{\text{idx}}] = 5 < b$, $\text{low} = \text{mid} + 1 = 2$
     - Iteration 2:
       - $\text{mid} = 2$
-      - $\text{mid\_idx} = \text{indices}[2] = 1$
-      - Since $\text{a\_idx} \not ={\text{mid\_idx}}$ and $\text{nums}[\text{mid\_idx}] = 7 = b$, return $1$
+      - $\text{mid}_{\text{idx}} = \text{indices}[2] = 1$
+      - Since $\text{a}_{\text{idx}} \not ={\text{mid}_{\text{idx}}}$ and $\text{nums}[\text{mid}_{\text{idx}}] = 7 = b$, return $1$
   - Return $[0, 1]$
 
 ### Time Complexity
