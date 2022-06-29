@@ -76,17 +76,17 @@ Since the number is converted to a string and then reversed, the time complexity
 
 If $x \lt 0$, return `False` since no negative number can be a palindrome due to the negative sign.
 
-Otherwise, initialize $reverse$ as $0$ to store the reverse of $x$.
+Otherwise, initialize $\text{reverse}$ as $0$ to store the reverse of $x$.
 
-Create a copy $temp_x$ of $x$.
+Create a copy $\text{temp}_x$ of $x$.
 
-While $temp_x \not ={0}$:
+While $\text{temp}_x \not ={0}$:
 
-- Get the remainder as $remainder = temp_x \bmod 10$
-- Update the reverse as $reverse=reverse*10+remainder$
-- Update $temp_x$ as $temp_x = \lfloor temp_x \div 10 \rfloor$
+- Get the remainder as $\text{remainder} = \text{temp}_x \bmod 10$
+- Update the reverse as $\text{reverse}=\text{reverse}*10+\text{remainder}$
+- Update $\text{temp}_x$ as $\text{temp}_x = \lfloor \text{temp}_x \div 10 \rfloor$
 
-If $reverse=x$, return `True`. Otherwise, return `False`.
+If $\text{reverse}=x$, return `True`. Otherwise, return `False`.
 
 ### Example
 
@@ -98,20 +98,20 @@ x = 121
 
 **Procedure**
 
-- $reverse = 0$ and $temp_x = x = 121$
+- $reverse = 0$ and $\text{temp}_x = x = 121$
 - Iteration 1:
-  - $remainder = 121 \bmod 10 = 1$
-  - $reverse = 0 * 10 + 1 = 1$
-  - $temp_x = \lfloor 121 \div 10 \rfloor = 12$
+  - $\text{remainder} = 121 \bmod 10 = 1$
+  - $\text{reverse} = 0 * 10 + 1 = 1$
+  - $\text{temp}_x = \lfloor 121 \div 10 \rfloor = 12$
 - Iteration 2:
-  - $remainder = 12 \bmod 10 = 2$
-  - $reverse = 1 * 10 + 2 = 12$
-  - $temp_x = \lfloor 12 \div 10 \rfloor = 1$
+  - $\text{remainder} = 12 \bmod 10 = 2$
+  - $\text{reverse} = 1 * 10 + 2 = 12$
+  - $\text{temp}_x = \lfloor 12 \div 10 \rfloor = 1$
 - Iteration 3:
-  - $remainder = 1 \bmod 10 = 1$
-  - $reverse = 12 * 10 + 1 = 121$
-  - $temp_x = \lfloor 1 \div 10 \rfloor = 0$
-- Since $reverse = 121 = x$, return `True`
+  - $\text{remainder} = 1 \bmod 10 = 1$
+  - $\text{reverse} = 12 * 10 + 1 = 121$
+  - $\text{temp}_x = \lfloor 1 \div 10 \rfloor = 0$
+- Since $\text{reverse} = 121 = x$, return `True`
 
 ### Time Complexity
 
