@@ -1,10 +1,7 @@
 from collections.abc import Iterator
 from typing import Any
 
-
-class UnderflowException(Exception):
-    ...
-
+from src.exceptions import UnderflowError
 
 class ListNode:
     def __init__(self, value: Any = None) -> None:
@@ -39,7 +36,7 @@ class LinkedList:
 
     def pop(self) -> ListNode:
         if self.is_empty():
-            raise UnderflowException("The list is empty.")
+            raise UnderflowError("The list is empty.")
 
         node = self.head
         self.head = self.head.next
@@ -49,7 +46,7 @@ class LinkedList:
     def delete_after(self, node: ListNode) -> ListNode:
         if node.next is None:
             msg = "There is no node after the given node."
-            raise UnderflowException(msg)
+            raise UnderflowError(msg)
 
         deleted_node = node.next
         node.next = deleted_node.next
