@@ -1,5 +1,7 @@
 # <!-- omit in toc --> Problem 9 - Implement strStr()
 
+> Leetcode Link: [Implement strStr()](https://leetcode.com/problems/implement-strstr/).
+
 - [Statement](#statement)
 - [Examples](#examples)
 - [Solution 1 - Simple Loop](#solution-1---simple-loop)
