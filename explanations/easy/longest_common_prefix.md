@@ -198,7 +198,7 @@ strs = ["flower","flow","flight"]
 
 - Build the trie. The filled in nodes represent leaf nodes. Let the trie be called `trie`.
 
-![Example Trie](../../assets/imgs/example_trie.png)
+![Example Trie](/assets/imgs/example_trie.png)
 
 - $\text{prefix} = \epsilon$
 - $\text{node} = \text{trie}.\text{root}$
