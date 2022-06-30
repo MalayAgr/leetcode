@@ -1,8 +1,6 @@
 import string
 import sys
 
-sys.path.insert(0, "path/to/folder")
-
 import src.algos as algos
 
 alphabet = string.ascii_lowercase
