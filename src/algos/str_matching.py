@@ -49,9 +49,11 @@ def _transition_func(pattern: str, alphabet: str) -> dict[tuple[int, str], int]:
 
     for a in alphabet:
         for q in range(1, m + 1):
-            state = (
-                func[(prefix_func[q - 1], a)] if q == m or pattern[q] != a else q + 1
-            )
+            state = q + 1
+
+            if q == m or pattern[q] != a:
+                state = func[(prefix_func[q - 1], a)]
+
             func[(q, a)] = state
 
     return func
