@@ -3,6 +3,7 @@ from typing import Any
 
 from src.exceptions import UnderflowError
 
+
 class ListNode:
     def __init__(self, value: Any = None) -> None:
         self.value = value

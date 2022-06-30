@@ -1,5 +1,3 @@
-import sys
-
 from src.ds import LinkedList
 
 
