@@ -98,7 +98,41 @@ There are a total of $n - m + 1$ possible values for $i$ and for each $i$, the s
 >
 > Consider a string $\text{text}$ of length $n$.
 >
-> If $\text{text}$ is processed through $A$ and the final state $q_F=m$ is reached on the character at index $i$, then $\text{pattern}$ exists in $\text{text}$ and starts at index $i - m + 1$.
+> If $\text{text}$ is processed through $A$ and the final state $q_F=m$ is reached on the character at index $i \lt n$, then $\text{pattern}$ exists in $\text{text}$ and starts at index $i - m + 1$.
+
+The solution is made up of three parts.
+
+**Prefix Function**
+
+The prefix function is a function $\pi:\{0, 1, \dots, m - 1\} \rightarrow \{0, 1, \dots, m-1\}$ defined for $\text{pattern}$ such that:
+
+$$
+\pi[q] = \max \{k: k \lt q \text{ and pattern}[:k] \text{ is a suffix of pattern}[:q]\}
+$$
+
+In other words, $\pi[q]$ is the length of the longest _prefix_ of $\text{pattern}$ that is a _proper suffix_ (since $k \lt q$) of $\text{pattern}[:q]$.
+
+For example, let $\text{pattern} = \text{ababaca}$.
+
+The prefixes of $\text{pattern}$ are as shown:
+
+| $\epsilon$ | a | ab | aba | abab | ababa | ababac | ababaca |
+|---|---|---|---|---|---|---|---|
+
+$\pi$ is as shown:
+
+| q | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $\text{pattern}[:q]$ | $\text{a}$ | $\text{ab}$ | $\text{aba}$ | $\text{abab}$ | $\text{ababa}$ | $\text{ababac}$ | $\text{ababaca}$ |
+| Proper suffixes | $\epsilon$ | $\epsilon$, $\text{b}$ | $\epsilon$, $\text{a}$, $\text{ba}$ | $\epsilon$, $\text{b}$, $\text{ab}$, $\text{bab}$ | $\epsilon$, $\text{a}$, $\text{ba}$, $\text{aba}$, $\text{baba}$ | $\epsilon$, $\text{c}$, $\text{ac}$, $\text{bac}$, $\text{abac}$, $\text{babac}$ | $\epsilon$, $\text{a}$, $\text{ca}$, $\text{aca}$, $\text{baca}$, $\text{abaca}$, $\text{babaca}$ |
+| Required prefix | $\epsilon$ | $\epsilon$ | $\text{a}$ | $\text{ab}$ | $\text{aba}$ | $\epsilon$ | $\text{a}$ |
+| $\pi[q]$ | 0 | 0 | 1 | 2 | 3 | 0 | 1 |
+
+Intuitively, the prefix function encapsulates knowledge about how $\text{pattern}$ matches against shifts of itself. This informations is used to avoid testing useless positions in the naive algorithm.
+
+**Transition Function**
+
+**Running $\text{text}$ through the DFA**
 
 ### Example
 
