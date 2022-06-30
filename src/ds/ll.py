@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterator
 from typing import Any
 
@@ -15,7 +17,7 @@ class ListNode:
 
 class LinkedList:
     def __init__(self) -> None:
-        self.head = None
+        self.head: ListNode = None
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(head={self.head})"
