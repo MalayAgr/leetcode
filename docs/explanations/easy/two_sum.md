@@ -61,7 +61,7 @@ Sort the array but store the indices in the correct order instead of the element
 For each index in the array:
 
 - Use the index to get the element at that index. Let this element be $a$
-- Calculate the complement of $a$ as $b = \text{target} - a$ since $\text{target} = a + b$
+- Calculate the complement of $$a$$ as $$b = \text{target} - a$$ since $\text{target} = a + b$
 - Use binary search on the sorted indices to find $b$. If found, return its index with the index of $a$
 
 ### Implementation details
