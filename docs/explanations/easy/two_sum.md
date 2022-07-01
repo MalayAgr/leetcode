@@ -4,6 +4,7 @@ title: "Problem 1 - Two Sum"
 nav_order: 5
 parent: "Explanations"
 has_toc: false
+usemathjax: true
 ---
 
 # <!-- omit in toc --> Problem 1 - Two Sum
