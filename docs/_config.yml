@@ -27,7 +27,7 @@ color_scheme: dark
 plugins:
   - jekyll-feed
 permalink: pretty
-markdown: GFM
+markdown: kramdown
 
 defaults:
   - scope:
