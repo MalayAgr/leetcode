@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   platform, LeetCode.
 baseurl: "/leetcode" # the subpath of your site, e.g. /blog
 url: "https://malayagr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  MalayAgr
+github_username: MalayAgr
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs
@@ -27,8 +27,13 @@ color_scheme: dark
 plugins:
   - jekyll-feed
 permalink: pretty
-markdown: kramdown
+markdown: GFM
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      math: mathjax
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
