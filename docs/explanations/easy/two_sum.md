@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Problem 1 - Two Sum"
+nav_order: 5
+parent: "Explanations"
+has_toc: false
+---
+
 # <!-- omit in toc --> Problem 1 - Two Sum
 
 > Leetcode Link: [Two Sum](https://leetcode.com/problems/two-sum).
