@@ -62,7 +62,7 @@ For each index in the array:
 
 - Use the index to get the element at that index. Let this element be $$a$$
 - Calculate the complement of $$a$$ as $$b = \text{target} - a$$ since $$\text{target} = a + b$$
-- Use binary search on the sorted indices to find $b$. If found, return its index with the index of $$a$$
+- Use binary search on the sorted indices to find $$b$$. If found, return its index with the index of $$a$$
 
 ### Implementation details
 
@@ -94,17 +94,17 @@ target = 9
 
 - Sorted indices: $$[0, 3, 1, 2]$$
 - Iteration 1:
-  - $$\text{idx} = 0$$
-  - $$a = \text{nums}[0] = 2$$
-  - $$b = 9 - 2 = 7$$
+  - \$$\text{idx} = 0$$
+  - \$$a = \text{nums}[0] = 2$$
+  - \$$b = 9 - 2 = 7$$
   - Binary search with $$\text{low} = 0$$, $$\text{high} = 3$$ and $$\text{a}_{\text{idx}} = 2$$:
     - Iteration 1:
-      - $$\text{mid} = 1$$
-      - $$\text{mid}_{\text{idx}} = \text{indices}[1] = 3$$
+      - \$$\text{mid} = 1$$
+      - \$$\text{mid}_{\text{idx}} = \text{indices}[1] = 3$$
       - Since $$\text{nums}[\text{mid}_{\text{idx}}] = 5 < b$$, $$\text{low} = \text{mid} + 1 = 2$$
     - Iteration 2:
-      - $$\text{mid} = 2$$
-      - $$\text{mid}_{\text{idx}} = \text{indices}[2] = 1$$
+      - \$$\text{mid} = 2$$
+      - \$$\text{mid}_{\text{idx}} = \text{indices}[2] = 1$$
       - Since $$\text{a}_{\text{idx}} \not ={\text{mid}_{\text{idx}}}$$ and $$\text{nums}[\text{mid}_{\text{idx}}] = 7 = b$$, return $$1$$
   - Return $$[0, 1]$$
 
@@ -145,14 +145,14 @@ target = 9
 
 - Dictionary: $$\{\}$$
 - Iteration 1:
-  - $$a = 2$$
-  - $$b = 9 - 2 = 7$$
-  - $$b$$ is not in dictionary
+  - \$$a = 2$$
+  - \$$b = 9 - 2 = 7$$
+  - \$$b$$ is not in dictionary
   - Dictionary: $$\{2: 0\}$$
 - Iteration 2:
-  - $$a = 7$$
-  - $$b = 9 - 7 = 2$$
-  - $b$ is in the dictionary
+  - \$$a = 7$$
+  - \$$b = 9 - 7 = 2$$
+  - $$b$$ is in the dictionary
   - Return $$[1, 0]$$
 
 ### Time Complexity
