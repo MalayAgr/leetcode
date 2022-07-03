@@ -80,45 +80,45 @@ val = 2
 
 **Procedure**
 
-- Since $$\text{nums}[-1] = 2$$, no exchange is required.
-- $$i = -1$$, $$k = 0$$.
+- Since $$\text{nums}[-1] = 2$$, no exchange is required
+- \$$i = -1$$, $$k = 0$$
 - Iteration 1:
-  - $$j = 0$$
+  - \$$j = 0$$
   - Since $$\text{nums}[0] = 0 \not = 2$$:
-    - $$i = -1 + 1 = 0$$
-    - $$k = 0 + 1 = 1$$
+    - \$$i = -1 + 1 = 0$$
+    - \$$k = 0 + 1 = 1$$
     - Exchange $$\text{nums}[0]$$ with $$\text{nums}[0]$$
     - Now, $$\text{nums} = [0, 1, 2, 2, 3, 0, 4, 2]$$
 - Iteration 2:
-  - $$j = 1$$
+  - \$$j = 1$$
   - Since $$\text{nums}[1] = 1 \not = 2$$:
-    - $$i = 0 + 1 = 1$$
-    - $$k = 1 + 1 = 2$$
+    - \$$i = 0 + 1 = 1$$
+    - \$$k = 1 + 1 = 2$$
     - Exchange $$\text{nums}[1]$$ with $$\text{nums}[1]$$
     - Now, $$\text{nums} = [0, 1, 2, 2, 3, 0, 4, 2]$$
 - Iteration 3:
-  - $$j = 2$$ and since $$\text{nums}[2] = 2$$, continue.
+  - \$$j = 2$$ and since $$\text{nums}[2] = 2$$, continue
 - Iteration 4:
-  - $$j = 3$$ and since $$\text{nums}[3] = 2$$, continue.
+  - \$$j = 3$$ and since $$\text{nums}[3] = 2$$, continue
 - Iteration 5:
-  - $$j = 4$$
+  - \$$j = 4$$
   - Since $$\text{nums}[4] = 3 \not = 2$$:
-    - $$i = 1 + 1 = 2$$
-    - $$k = 2 + 1 = 3$$
+    - \$$i = 1 + 1 = 2$$
+    - \$$k = 2 + 1 = 3$$
     - Exchange $$\text{nums}[2]$$ with $$\text{nums}[4]$$
     - Now, $$\text{nums} = [0, 1, 3, 2, 2, 0, 4, 2]$$
 - Iteration 6:
-  - $$j = 5$$
+  - \$$j = 5$$
   - Since $$\text{nums}[5] = 0 \not = 2$$:
-    - $$i = 2 + 1 = 3$$
-    - $$k = 3 + 1 = 4$$
+    - \$$i = 2 + 1 = 3$$
+    - \$$k = 3 + 1 = 4$$
     - Exchange $$\text{nums}[3]$$ with $$\text{nums}[5]$$
     - Now, $$\text{nums} = [0, 1, 3, 0, 2, 2, 4, 2]$$
 - Iteration 7:
-  - $$j = 6$$
+  - \$$j = 6$$
   - Since $$\text{nums}[6] = 4 \not = 2$$:
-    - $$i = 3 + 1 = 4$$
-    - $$k = 4 + 1 = 5$$
+    - \$$i = 3 + 1 = 4$$
+    - \$$k = 4 + 1 = 5$$
     - Exchange $$\text{nums}[4]$$ with $$\text{nums}[6]$$
     - Now, $$\text{nums} = [0, 1, 3, 0, 4, 2, 2, 2]$$
 - Exchange $$\text{nums}[5]$$ with $$\text{nums}[-1]$$

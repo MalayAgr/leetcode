@@ -39,7 +39,9 @@ Output: [0]
 ### Concept
 
 > **Assertion 1**: Let the two lists to be merged be $$a[m]$$ and $$b[n]$$ and the merged list be $$c[m + n]$$. Consider the two lists as two stacks $$s_a$$ and $$s_b$$ with the TOS being the first element. Then:
+>
 > $$c_i=\min\{TOS(s_a),TOS(s_b)\}$$
+>
 > Provided that the respective stack is popped after each $$c_i$$ is assigned and neither of the stacks run out.
 >
 > **Assertion 2**: If either of the stacks runs out first and $$s$$ is the other stack, $$c_i=TOS(s)$$ for all $$i$$ until $$s$$ is empty.
@@ -89,30 +91,30 @@ list1 = [1,2,4], list2 = [1,3,4]
 
 **Procedure**
 
-- $$\text{curr}_a = 1$$ and $$\text{curr}_b = 1$$.
-- Since neither is `None`, continue.
-- $$\text{result} = -1$$ and $$\text{curr}_{\text{res}} = -1$$.
+- \$$\text{curr}_a = 1$$ and $$\text{curr}_b = 1$$
+- Since neither is `None`, continue
+- \$$\text{result} = -1$$ and $$\text{curr}_{\text{res}} = -1$$
 - Iteration 1. Since $$\text{curr}_a.\text{val} = 1 \le \text{curr}_b.\text{val} = 1$$:
-  - Set $$\text{curr}_{\text{res}}.\text{next} = 1$$.
-  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$$.
-  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = 2$$.
+  - Set $$\text{curr}_{\text{res}}.\text{next} = 1$$
+  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$$
+  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = 2$$
 - Iteration 2. Since $$\text{curr}_b.\text{val} = 1 \le \text{curr}_a.\text{val} = 2$$:
-  - Set $$\text{curr}_{\text{res}}.\text{next} = 1$$.
-  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$$.
-  - Set $$\text{curr}_b = \text{curr}_b.\text{next} = 3$$.
+  - Set $$\text{curr}_{\text{res}}.\text{next} = 1$$
+  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$$
+  - Set $$\text{curr}_b = \text{curr}_b.\text{next} = 3$$
 - Iteration 3. Since $$\text{curr}_a.\text{val} = 2 \le \text{curr}_b.\text{val} = 3$$:
-  - Set $$\text{curr}_{\text{res}}.\text{next} = 2$$.
+  - Set $$\text{curr}_{\text{res}}.\text{next} = 2$$
   - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 2$$.
-  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = 4$$.
+  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = 4$$
 - Iteration 4. Since $$\text{curr}_b.\text{val} = 4 \le \text{curr}_a.\text{val} = 4$$:
-  - Set $$\text{curr}_{\text{res}}.\text{next} = 4$$.
-  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 4$$.
-  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = \text{None}$$.
-- Since $$\text{curr}_a$$ is `None`, set $$\text{curr}_{\text{res}}.\text{next} = \text{curr}_b = 4$$.
+  - Set $$\text{curr}_{\text{res}}.\text{next} = 4$$
+  - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 4$$
+  - Set $$\text{curr}_a = \text{curr}_a.\text{next} = \text{None}$$
+- Since $$\text{curr}_a$$ is `None`, set $$\text{curr}_{\text{res}}.\text{next} = \text{curr}_b = 4$$
 - Set $$\text{result} = \text{result}.\text{next} = 1$$
-- Return $$\text{result}$$.
+- Return $$\text{result}$$
 
-$$$$ at the end:
+$$\text{result}$$ at the end:
 
 $$1 \rightarrow 1  \rightarrow 2 \rightarrow 3 \rightarrow 4 \rightarrow 4 \rightarrow \text{None}$$
 

@@ -88,40 +88,40 @@ s = "MCMXCIV"
 Let the maps be called $$\text{VALUES}$$ and $$\text{SUB\_PAIRS}$$.
 
 - Iteration 1:
-  - $$i = 0$$
-  - $$\text{digit} = s[0] = M$$
-  - $$\text{value} = \text{VALUES}[M] = 1000$$
-  - $$\text{increment} = 1$$
+  - \$$i = 0$$
+  - \$$\text{digit} = s[0] = M$$
+  - \$$\text{value} = \text{VALUES}[M] = 1000$$
+  - \$$\text{increment} = 1$$
   - Since $$M$$ is not in $$\text{SUB\_PAIRS}$$, $$\text{result} = 0 + 1000 = 1000$$
-  - $$i = 0 + 1 = 1$$
+  - \$$i = 0 + 1 = 1$$
 - Iteration 2:
-  - $$i = 1$$
-  - $$\text{digit} = s[1] = C$$
-  - $$value = \text{VALUES}[C] = 100$$
-  - $$\text{increment} = 1$$
+  - \$$i = 1$$
+  - \$$\text{digit} = s[1] = C$$
+  - \$$value = \text{VALUES}[C] = 100$$
+  - \$$\text{increment} = 1$$
   - Since $$C$$ is in $$\text{SUB\_PAIRS}$$ and the next digit $$M$$ is in the corresponding pair
-    - $$\text{value} = \text{VALUES}[M] - 100 = 900$$
-    - $$\text{increment} = 2$$
-  - $$\text{result} = 1000 + 900 = 1900$$
-  - $$i = 1 + 2 = 3$$
+    - \$$\text{value} = \text{VALUES}[M] - 100 = 900$$
+    - \$$\text{increment} = 2$$
+  - \$$\text{result} = 1000 + 900 = 1900$$
+  - \$$i = 1 + 2 = 3$$
 - Iteration 3:
-  - $$\text{digit} = s[3] = X$$
-  - $$\text{value} = \text{VALUES}[X] = 10$$
-  - $$\text{increment} = 1$$
+  - \$$\text{digit} = s[3] = X$$
+  - \$$\text{value} = \text{VALUES}[X] = 10$$
+  - \$$\text{increment} = 1$$
   - Since $$X$$ is in $$\text{SUB\_PAIRS}$$ and the next digit $$C$$ is in the corresponding pair
-    - $$\text{value} = \text{VALUES}[C] - 10 = 90$$
-    - $$\text{increment} = 2$$
-  - $$\text{result} = 1900 + 90 = 1990$$
-  - $$i = 3 + 2 = 5$$
+    - \$$\text{value} = \text{VALUES}[C] - 10 = 90$$
+    - \$$\text{increment} = 2$$
+  - \$$\text{result} = 1900 + 90 = 1990$$
+  - \$$i = 3 + 2 = 5$$
 - Iteration 4:
-  - $$\text{digit} = s[5] = I$$
-  - $$value = \text{VALUES}[I] = 1$$
-  - $$\text{increment} = 1$$
+  - \$$\text{digit} = s[5] = I$$
+  - \$$value = \text{VALUES}[I] = 1$$
+  - \$$\text{increment} = 1$$
   - Since $$I$$ is in $$\text{SUB\_PAIRS}$$ and the next digit $$V$$ is in the corresponding pair
-    - $$\text{value} = \text{VALUES}[V] - 1 = 4$$,
-    - $$\text{increment} = 2$$
-  - $$\text{result} = 1990 + 4 = 1994$$
-  - $$i = 5 + 2 = 7$$.
+    - \$$\text{value} = \text{VALUES}[V] - 1 = 4$$
+    - \$$\text{increment} = 2$$
+  - \$$\text{result} = 1990 + 4 = 1994$$
+  - \$$i = 5 + 2 = 7$$
 - Since $$i \ge len(s)$$, the loop ends
 - Return $$\text{result} = 1994$$
 

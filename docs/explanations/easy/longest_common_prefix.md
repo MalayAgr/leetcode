@@ -75,34 +75,34 @@ strs = ["flower","flow","flight"]
 
 **Procedure**
 
-- $$\text{first} = \text{flower}$$
-- $$\text{remaining} = [\text{flow}, \text{flight}]$$
+- \$$\text{first} = \text{flower}$$
+- \$$\text{remaining} = [\text{flow}, \text{flight}]$$
 - Iteration 1:
-  - $$i = 0$
-  - $$\text{char} = f$
+  - \$$i = 0$$
+  - \$$\text{char} = f$$
   - Iteration 1:
-    - $$\text{string} = \text{flow}$$
+    - \$$\text{string} = \text{flow}$$
     - Since $$i \lt len(\text{flow})$$ and $$\text{string}[0] = f$$, continue
   - Iteration 2:
-    - $$\text{string} = \text{flight}$$
+    - \$$\text{string} = \text{flight}$$
     - Since $$i \lt len(\text{string})$$ and $$\text{string}[0] = f$$, continue
 - Iteration 2:
-  - $$i = 1$$
-  - $$\text{char} = l$$
+  - \$$i = 1$$
+  - \$$\text{char} = l$$
   - Iteration 1:
-    - $$\text{string} = \text{flow}$$
+    - \$$\text{string} = \text{flow}$$
     - Since $$i \lt len(\text{flow})$$ and $$\text{string}[1] = l$$, continue
   - Iteration 2:
-    - $$\text{string} = \text{flight}$$
+    - \$$\text{string} = \text{flight}$$
     - Since $$i \lt len(\text{string})$$ and $$\text{string}[1] = l$$, continue
 - Iteration 3:
-  - $$i = 2$$
-  - $$\text{char} = o$$
+  - \$$i = 2$$
+  - \$$\text{char} = o$$
   - Iteration 1:
-    - $$\text{string} = \text{flow}$$
+    - \$$\text{string} = \text{flow}$$
     - Since $$i \lt len(\text{flow})$$ and $$\text{string}[2] = o$$, continue
   - Iteration 2:
-    - $$\text{string} = \text{flight}$$
+    - \$$\text{string} = \text{flight}$$
     - Since $$i \lt len(\text{string})$$ but $$\text{string}[2] = i \not = {o}$$, return $$\text{first}[:2] = fl$$.
 
 ### Time complexity
@@ -198,16 +198,16 @@ strs = ["flower","flow","flight"]
 
 - Build the trie. The filled in nodes represent leaf nodes. Let the trie be called `trie`.
 
-![Example Trie](/assets/imgs/example_trie.png)
+![Example Trie]({{ site.baseurl }}/assets/imgs/example_trie.png)
 
-- $$\text{prefix} = \epsilon$$
-- $$\text{node} = \text{trie}.\text{root}$$
+- \$$\text{prefix} = \epsilon$$
+- \$$\text{node} = \text{trie}.\text{root}$$
 - Iteration 1:
   - Since $$\text{node}$$ has a single child and is not a leaf, change $$\text{node}$$ to the single child
-  - $$\text{prefix} = \epsilon + \text{node}.\text{value} = f$$
+  - \$$\text{prefix} = \epsilon + \text{node}.\text{value} = f$$
 - Iteration 2:
   - Since $$\text{node}$$ has a single child and is not a leaf, change $$\text{node}$$ to the single child
-  - $$\text{prefix} = f + \text{node}.\text{value} = fl$$
+  - \$$\text{prefix} = f + \text{node}.\text{value} = fl$$
 - Since $$\text{node}$$ has more than one child, stop
 - Return $$\text{prefix} = fl$$
 

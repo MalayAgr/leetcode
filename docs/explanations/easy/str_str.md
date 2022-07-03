@@ -69,15 +69,15 @@ needle = "ll"
 
 **Procedure**
 
-- $$m = 2$$
+- \$$m = 2$$
 - Iteration 1:
-  - $$i = 0$$
+  - \$$i = 0$$
   - Since $$\text{needle} \not = {\text{haystack}[0:2] = \text{he}}$$, continue
 - Iteration 2:
-  - $$i = 1$$
+  - \$$i = 1$$
   - Since $$\text{needle} \not = {\text{haystack}[1:3] = \text{el}}$$, continue
 - Iteration 3:
-  - $$i = 2$$
+  - \$$i = 2$$
   - Since $$\text{needle} = \text{haystack}[2:4] = \text{ll}$$, return $$i = 2$$
 
 ### Time complexity
@@ -90,11 +90,11 @@ There are a total of $$n - m + 1$$ possible values for $$i$$ and for each $$i$$,
 
 > To learn about DFAs, see [Deterministic finite automaton](https://en.wikipedia.org/wiki/Deterministic_finite_automaton).
 >
-> **Assertion 1**: Consider a string $$\text{pattern}$$ of length $$m$$. Let $$A=(Q, \Sigma, \delta, q_0, F)$$ be a DFA such that $$L(A)=\{w \mid w \text{ ends with pattern}\}$$. Then, $$A$$ has $$m + 1$$ states ($|Q| = m$$) and a single final state $$q_F$$ ($$|F| = 1$).
+> **Assertion 1**: Consider a string $$\text{pattern}$$ of length $$m$$. Let $$A=(Q, \Sigma, \delta, q_0, F)$$ be a DFA such that $$L(A)=\{w \mid w \text{ ends with pattern}\}$$. Then, $$A$$ has $$m + 1$$ states ($$\mid Q \mid = m$$) and a single final state $$q_F$$ ($$\mid F \mid = 1$$).
 >
 > For example, if $$\text{pattern}=ll$$, $$Q=\{0, 1, 2\}$$, $$\Sigma=\{a,b,\dots,z\}$$, $$q_0=0$$ and $$F=\{2\}$$, then $$A$$ is as shown:
 >
-> ![DFA Example](/assets/imgs/dfa_example.png)
+> ![DFA Example]({{ site.baseurl }}/assets/imgs/dfa_example.png)
 >
 > **Assertion 2**: Let $$A$$ be a DFA as mentioned above with $$Q=\{0, 1, \dots, m\}$$ and $$q_F=m$$.
 >
@@ -123,7 +123,7 @@ The prefixes of $$\text{pattern}$$ are as shown:
 | $$\epsilon$$ | $$\text{a}$$ | $$\text{ab}$$ | $$\text{aba}$$ | $$\text{abab}$$ | $$\text{ababa}$$ | $$\text{ababac}$$ | $$\text{ababaca}$$ |
 |---|---|---|---|---|---|---|---|
 
-$$$$ is as shown:
+$$\pi$$ is as shown:
 
 | q | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -207,37 +207,37 @@ needle = "ll"
   | *2 | 0 | 0 | $$\dots$$ | 2 | $$\dots$$ | 0 |
 
   The $$\dots$$ indicates that the values are same everywhere and $$*$$ indicates the final state:.
-- $$q = 0$$
+- \$$q = 0$$
 - Iteration 1:
-  - $$i = 0$$
-  - $$a = \text{haystack[i]} = \text{h}$$
-  - $$q = \delta(0, \text{h}) = 0$$
+  - \$$i = 0$$
+  - \$$a = \text{haystack[i]} = \text{h}$$
+  - \$$q = \delta(0, \text{h}) = 0$$
   - Since $$q \not = 2$$, continue.
 - Iteration 2:
-  - $$i = 1$$
-  - $$a = \text{haystack[i]} = \text{e}$$
-  - $$q = \delta(0, \text{e}) = 0$$
+  - \$$i = 1$$
+  - \$$a = \text{haystack[i]} = \text{e}$$
+  - \$$q = \delta(0, \text{e}) = 0$$
   - Since $$q \not = 2$$, continue.
 - Iteration 3:
-  - $$i = 2$$
-  - $$a = \text{haystack[i]} = \text{l}$$
-  - $$q = \delta(0, \text{l}) = 1$$
+  - \$$i = 2$$
+  - \$$a = \text{haystack[i]} = \text{l}$$
+  - \$$q = \delta(0, \text{l}) = 1$$
   - Since $$q \not = 2$$, continue.
 - Iteration 4:
-  - $$i = 3$$
-  - $$a = \text{haystack[i]} = \text{l}$$
-  - $$q = \delta(1, \text{l}) = 2$$
+  - \$$i = 3$$
+  - \$$a = \text{haystack[i]} = \text{l}$$
+  - \$$q = \delta(1, \text{l}) = 2$$
   - Since $$q = 2$$, return $$i - m + 1 = 2$$.
 
 ### Time complexity
 
 The prefix function can be computed in $$\mathcal{O}(m)$$.
 
-Using the prefix function, the transition function can be computed in $$\mathcal{O}(m|\Sigma|)$$.
+Using the prefix function, the transition function can be computed in $$\mathcal{O}(m\mid \Sigma \mid)$$.
 
 Finally, the string can be run through the DFA in $$\mathcal{O}(n)$$.
 
-Thus, the overall time complexity is $$\mathcal{O}(m|\Sigma|+n)$$.
+Thus, the overall time complexity is $$\mathcal{O}(m\mid \Sigma \mid+n)$$.
 
 ## Solution 3 - Knuth-Morris-Pratt (KMP) Algorithm
 

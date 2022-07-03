@@ -98,19 +98,19 @@ x = 121
 
 **Procedure**
 
-- $$reverse = 0$$ and $$\text{temp}_x = x = 121$$
+- \$$reverse = 0$$ and $$\text{temp}_x = x = 121$$
 - Iteration 1:
-  - $$\text{remainder} = 121 \bmod 10 = 1$$
-  - $$\text{reverse} = 0 * 10 + 1 = 1$$
-  - $$\text{temp}_x = \lfloor 121 \div 10 \rfloor = 12$$
+  - \$$\text{remainder} = 121 \bmod 10 = 1$$
+  - \$$\text{reverse} = 0 * 10 + 1 = 1$$
+  - \$$\text{temp}_x = \lfloor 121 \div 10 \rfloor = 12$$
 - Iteration 2:
-  - $$\text{remainder} = 12 \bmod 10 = 2$$
-  - $$\text{reverse} = 1 * 10 + 2 = 12$$
-  - $$\text{temp}_x = \lfloor 12 \div 10 \rfloor = 1$$
+  - \$$\text{remainder} = 12 \bmod 10 = 2$$
+  - \$$\text{reverse} = 1 * 10 + 2 = 12$$
+  - \$$\text{temp}_x = \lfloor 12 \div 10 \rfloor = 1$$
 - Iteration 3:
-  - $$\text{remainder} = 1 \bmod 10 = 1$$
-  - $$\text{reverse} = 12 * 10 + 1 = 121$$
-  - $$\text{temp}_x = \lfloor 1 \div 10 \rfloor = 0$$
+  - \$$\text{remainder} = 1 \bmod 10 = 1$$
+  - \$$\text{reverse} = 12 * 10 + 1 = 121$$
+  - \$$\text{temp}_x = \lfloor 1 \div 10 \rfloor = 0$$
 - Since $$\text{reverse} = 121 = x$$, return `True`
 
 ### Time Complexity
