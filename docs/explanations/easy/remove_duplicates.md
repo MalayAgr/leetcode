@@ -1,6 +1,7 @@
 ---
 layout: default
-parent: "Easy Problems"
+parent: Easy Problems
+grand_parent: Explanations
 has_toc: false
 ---
 # <!-- omit in toc --> Problem 7 - Remove Duplicates from Sorted Array

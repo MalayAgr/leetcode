@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Easy Problems"
-parent: "Explanations"
+title: Easy Problems
+parent: Explanations
 nav_order: 1
 has_toc: false
 has_children: true
