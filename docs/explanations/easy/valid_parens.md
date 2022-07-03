@@ -92,4 +92,4 @@ s = ([]){}
 
 ### Time Complexity
 
-In the worst-case, the entire string will be looped over before getting the answer. Thus, the time complexity is $\mathcal{O}(n)$.
+In the worst-case, the entire string will be looped over before getting the answer. Thus, the time complexity is $$\mathcal{O}(n)$$.

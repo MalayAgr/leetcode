@@ -17,7 +17,7 @@ Since it is impossible to change the length of the array in some languages, you 
 
 Return `k` after placing the final result in the first `k` slots of `nums`.
 
-Do not allocate extra space for another array. You must do this by modifying the input array in-place with $\mathcal{O}(1)$ extra memory.
+Do not allocate extra space for another array. You must do this by modifying the input array in-place with $$\mathcal{O}(1)$$ extra memory.
 
 ## Examples
 
@@ -41,22 +41,22 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 > **Assertion**: In a sorted array, duplicates of a number will be consecutive.
 
-Set $\text{curr}$ to the first element of $\text{nums}$.
+Set $$\text{curr}$$ to the first element of $$\text{nums}$$.
 
-Initialize $\text{count}$ to $0$. It will keep track of the total number of duplicates in $\text{nums}$.
+Initialize $$\text{count}$$ to $$0$$. It will keep track of the total number of duplicates in $$\text{nums}$$.
 
-Initialize $k$, the return value, to $1$.
+Initialize $$k$$, the return value, to $$1$$.
 
-For each index $1 \le i \lt len(\text{nums})$:
+For each index $$1 \le i \lt len(\text{nums})$$:
 
-- Get the value $\text{val}$ at index $i$.
-- If $\text{val} = \text{curr}$, increment $\text{count}$ by $1$ since a duplicate has been encountered and continue.
-- Otherwise, $\text{val} \not = \text{curr}$:
-  - Set $\text{nums}[i-\text{count}]$ to $\text{val}$, thus "moving" the non-duplicate to the position immediately after the first index where $\text{curr}$ is present.
-  - Change $\text{curr}$ to $\text{val}$.
-  - Increment $k$ by $1$ since a non-duplicate has been found.
+- Get the value $$\text{val}$$ at index $$i$$.
+- If $$\text{val} = \text{curr}$$, increment $$\text{count}$$ by $$1$$ since a duplicate has been encountered and continue.
+- Otherwise, $$\text{val} \not = \text{curr}$$:
+  - Set $$\text{nums}[i-\text{count}]$$ to $$\text{val}$$, thus "moving" the non-duplicate to the position immediately after the first index where $$\text{curr}$$ is present.
+  - Change $$\text{curr}$$ to $$\text{val}$$.
+  - Increment $$k$$ by $$1$$ since a non-duplicate has been found.
 
-Finally, return $k$.
+Finally, return $$k$$.
 
 ### Example
 
@@ -68,65 +68,65 @@ nums = [0,0,1,1,1,2,2,3,3,4]
 
 **Procedure**
 
-- $\text{curr} = \text{nums}[0] = 0$
-- $\text{count} = 0$
-- $k = 1$
+- $$\text{curr} = \text{nums}[0] = 0$$
+- $$\text{count} = 0$$
+- $$k = 1$$
 - Iteration 1:
-  - $i = 1$.
-  - $\text{val} = \text{nums}[1] = 0$.
-  - Since $\text{val} = \text{curr}$, $\text{count} = 0 + 1 = 1$.
+  - $$i = 1$$.
+  - $$\text{val} = \text{nums}[1] = 0$$.
+  - Since $$\text{val} = \text{curr}$$, $$\text{count} = 0 + 1 = 1$$.
 - Iteration 2:
-  - $i = 2$
-  - $\text{val} = \text{nums}[2] = 1$
-  - Since $\text{val} \not = \text{curr}$:
-    - $\text{nums}[i - \text{count}] = \text{nums}[1] = 1$
-    - Now, $\text{nums} = [0, 1, 1, 1, 1, 2, 2, 3, 3]$.
-    - $\text{curr} = 1$.
-    - $k = 1 + 1 = 2$.
+  - $$i = 2$$
+  - $$\text{val} = \text{nums}[2] = 1$$
+  - Since $$\text{val} \not = \text{curr}$$:
+    - $$\text{nums}[i - \text{count}] = \text{nums}[1] = 1$$
+    - Now, $$\text{nums} = [0, 1, 1, 1, 1, 2, 2, 3, 3]$$.
+    - $$\text{curr} = 1$$.
+    - $$k = 1 + 1 = 2$$.
 - Iteration 3:
-  - $i = 3$
-  - $\text{val} = \text{nums}[3] = 1$
-  - Since $\text{val} = \text{curr}$, $\text{count} = 1 + 1 = 2$.
+  - $$i = 3$$
+  - $$\text{val} = \text{nums}[3] = 1$$
+  - Since $$\text{val} = \text{curr}$$, $$\text{count} = 1 + 1 = 2$$.
 - Iteration 4:
-  - $i = 4$
-  - $\text{val} = \text{nums}[4] = 1$
-  - Since $\text{val} = \text{curr}$, $\text{count} = 2 + 1 = 3$.
+  - $$i = 4$$
+  - $$\text{val} = \text{nums}[4] = 1$$
+  - Since $$\text{val} = \text{curr}$$, $$\text{count} = 2 + 1 = 3$$.
 - Iteration 5:
-  - $i = 5$
-  - $\text{val} = \text{nums}[5] = 2$
-  - Since $\text{val} \not = \text{curr}$:
-    - $\text{nums}[i - \text{count}] = \text{nums}[2] = 2$
-    - Now, $\text{nums} = [0, 1, 2, 1, 1, 2, 2, 3, 3]$.
-    - $\text{curr} = 2$.
-    - $k = 2 + 1 = 3$.
+  - $$i = 5$$
+  - $$\text{val} = \text{nums}[5] = 2$$
+  - Since $$\text{val} \not = \text{curr}$$:
+    - $$\text{nums}[i - \text{count}] = \text{nums}[2] = 2$$
+    - Now, $$\text{nums} = [0, 1, 2, 1, 1, 2, 2, 3, 3]$$.
+    - $$\text{curr} = 2$$.
+    - $$k = 2 + 1 = 3$$.
 - Iteration 6:
-  - $i = 6$
-  - $\text{val} = \text{nums}[6] = 2$
-  - Since $\text{val} = \text{curr}$, $\text{count} = 3 + 1 = 4$.
+  - $$i = 6$$
+  - $$\text{val} = \text{nums}[6] = 2$$
+  - Since $$\text{val} = \text{curr}$$, $$\text{count} = 3 + 1 = 4$$.
 - Iteration 7:
-  - $i = 7$
-  - $\text{val} = \text{nums}[7] = 3$
-  - Since $\text{val} \not = \text{curr}$:
-    - $\text{nums}[i - \text{count}] = \text{nums}[3] = 3$
-    - Now, $\text{nums} = [0, 1, 2, 3, 1, 2, 2, 3, 3]$.
-    - $\text{curr} = 3$.
-    - $k = 3 + 1 = 4$.
+  - $$i = 7$$
+  - $$\text{val} = \text{nums}[7] = 3$$
+  - Since $$\text{val} \not = \text{curr}$$:
+    - $$\text{nums}[i - \text{count}] = \text{nums}[3] = 3$$
+    - Now, $$\text{nums} = [0, 1, 2, 3, 1, 2, 2, 3, 3]$$.
+    - $$\text{curr} = 3$$.
+    - $$k = 3 + 1 = 4$$.
 - Iteration 8:
-  - $i = 8$
-  - $\text{val} = \text{nums}[8] = 3$
-  - Since $\text{val} = \text{curr}$, $\text{count} = 4 + 1 = 5$.
+  - $$i = 8$$
+  - $$\text{val} = \text{nums}[8] = 3$$
+  - Since $$\text{val} = \text{curr}$$, $$\text{count} = 4 + 1 = 5$$.
 - Iteration 9:
-  - $i = 9$
-  - $\text{val} = \text{nums}[9] = 4$
-  - Since $\text{val} \not = \text{curr}$:
-    - $\text{nums}[i - \text{count}] = \text{nums}[4] = 4$
-    - Now, $\text{nums} = [0, 1, 2, 3, 4, 2, 2, 3, 3]$.
-    - $\text{curr} = 4$.
-    - $k = 4 + 1 = 5$.
-- Return $k = 5$.
+  - $$i = 9$$
+  - $$\text{val} = \text{nums}[9] = 4$$
+  - Since $$\text{val} \not = \text{curr}$$:
+    - $$\text{nums}[i - \text{count}] = \text{nums}[4] = 4$$
+    - Now, $$\text{nums} = [0, 1, 2, 3, 4, 2, 2, 3, 3]$$.
+    - $$\text{curr} = 4$$.
+    - $$k = 4 + 1 = 5$$.
+- Return $$k = 5$$.
 
-At the end, $\text{nums} = [0, 1, 2, 3, 4, 2, 2, 3, 3, 4]$.
+At the end, $$\text{nums} = [0, 1, 2, 3, 4, 2, 2, 3, 3, 4]$$.
 
 ### Time Complexity
 
-The loop goes over each element of $\text{nums}$. Thus, the time complexity is $\mathcal{O}(n)$.
+The loop goes over each element of $$\text{nums}$$. Thus, the time complexity is $$\mathcal{O}(n)$$.

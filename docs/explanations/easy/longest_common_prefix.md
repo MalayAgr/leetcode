@@ -40,13 +40,13 @@ Explanation: There is no common prefix among the input strings.
 
 > **Assertion**: If two or more strings have a common prefix, then they have the same character at the same index until the end of the of common prefix.
 
-Let $\text{first}$ be the first string in $\text{strs}$.
+Let $$\text{first}$$ be the first string in $$\text{strs}$$.
 
-For each character $\text{first[i]}$ in the first string and for each string $\text{string}$ in the remaining strings:
+For each character $$\text{first[i]}$$ in the first string and for each string $$\text{string}$$ in the remaining strings:
 
-- If $\text{string[i]} \not ={\text{first[i]}}$, return $\text{first}[:i]$
+- If $$\text{string[i]} \not ={\text{first[i]}}$$, return $$\text{first}[:i]$$
 
-If no return occurs in this loop, return $\text{first}$ since it is the longest common prefix.
+If no return occurs in this loop, return $$\text{first}$$ since it is the longest common prefix.
 
 ### Implementation Details
 
@@ -75,45 +75,45 @@ strs = ["flower","flow","flight"]
 
 **Procedure**
 
-- $\text{first} = \text{flower}$
-- $\text{remaining} = [\text{flow}, \text{flight}]$
+- $$\text{first} = \text{flower}$$
+- $$\text{remaining} = [\text{flow}, \text{flight}]$$
 - Iteration 1:
-  - $i = 0$
-  - $\text{char} = f$
+  - $$i = 0$
+  - $$\text{char} = f$
   - Iteration 1:
-    - $\text{string} = \text{flow}$
-    - Since $i \lt len(\text{flow})$ and $\text{string}[0] = f$, continue
+    - $$\text{string} = \text{flow}$$
+    - Since $$i \lt len(\text{flow})$$ and $$\text{string}[0] = f$$, continue
   - Iteration 2:
-    - $\text{string} = \text{flight}$
-    - Since $i \lt len(\text{string})$ and $\text{string}[0] = f$, continue
+    - $$\text{string} = \text{flight}$$
+    - Since $$i \lt len(\text{string})$$ and $$\text{string}[0] = f$$, continue
 - Iteration 2:
-  - $i = 1$
-  - $\text{char} = l$
+  - $$i = 1$$
+  - $$\text{char} = l$$
   - Iteration 1:
-    - $\text{string} = \text{flow}$
-    - Since $i \lt len(\text{flow})$ and $\text{string}[1] = l$, continue
+    - $$\text{string} = \text{flow}$$
+    - Since $$i \lt len(\text{flow})$$ and $$\text{string}[1] = l$$, continue
   - Iteration 2:
-    - $\text{string} = \text{flight}$
-    - Since $i \lt len(\text{string})$ and $\text{string}[1] = l$, continue
+    - $$\text{string} = \text{flight}$$
+    - Since $$i \lt len(\text{string})$$ and $$\text{string}[1] = l$$, continue
 - Iteration 3:
-  - $i = 2$
-  - $\text{char} = o$
+  - $$i = 2$$
+  - $$\text{char} = o$$
   - Iteration 1:
-    - $\text{string} = \text{flow}$
-    - Since $i \lt len(\text{flow})$ and $\text{string}[2] = o$, continue
+    - $$\text{string} = \text{flow}$$
+    - Since $$i \lt len(\text{flow})$$ and $$\text{string}[2] = o$$, continue
   - Iteration 2:
-    - $\text{string} = \text{flight}$
-    - Since $i \lt len(\text{string})$ but $\text{string}[2] = i \not = {o}$, return $\text{first}[:2] = fl$.
+    - $$\text{string} = \text{flight}$$
+    - Since $$i \lt len(\text{string})$$ but $$\text{string}[2] = i \not = {o}$$, return $$\text{first}[:2] = fl$$.
 
 ### Time complexity
 
 The solution loops over each character in the first string and for each character, loops over the list of remaining strings.
 
-In general, the time-complexity is $\mathcal{O}(S)$ where $S$ is the sum of lengths of all strings.
+In general, the time-complexity is $$\mathcal{O}(S)$$ where $$S$$ is the sum of lengths of all strings.
 
-In the worst-case, all $n$ strings have the same length $m$, giving a complexity of $\mathcal{O}(n*m).$
+In the worst-case, all $$n$$ strings have the same length $$m$$, giving a complexity of $$\mathcal{O}(n*m).$$
 
-In the best case, the time complexity is $\mathcal{O}(n*m_{min})$, where $m_{min}$ is the minimum length of a string.
+In the best case, the time complexity is $$\mathcal{O}(n*m_{min})$$, where $$m_{min}$$ is the minimum length of a string.
 
 ## Solution 2 - Use a Trie
 
@@ -150,16 +150,16 @@ def trie_insert(
     x.is_leaf = True
 ```
 
-Let the trie be $\text{trie}$.
+Let the trie be $$\text{trie}$$.
 
-Initialize $\text{prefix}$ to an empty string. It will store the final prefix.
+Initialize $$\text{prefix}$$ to an empty string. It will store the final prefix.
 
-Starting at $\text{node}=\text{trie}.\text{root}$, while $\text{node}$ has a single child and is not a leaf node:
+Starting at $$\text{node}=\text{trie}.\text{root}$$, while $$\text{node}$$ has a single child and is not a leaf node:
 
-- Update $\text{node}$ so that it is now the only child
-- Update $\text{prefix}$ as $\text{prefix} = \text{prefix} + \text{node}.\text{value}$
+- Update $$\text{node}$$ so that it is now the only child
+- Update $$\text{prefix}$$ as $$\text{prefix} = \text{prefix} + \text{node}.\text{value}$$
 
-Return $\text{prefix}$.
+Return $$\text{prefix}$$.
 
 ### Implementation Details
 
@@ -200,21 +200,21 @@ strs = ["flower","flow","flight"]
 
 ![Example Trie](/assets/imgs/example_trie.png)
 
-- $\text{prefix} = \epsilon$
-- $\text{node} = \text{trie}.\text{root}$
+- $$\text{prefix} = \epsilon$$
+- $$\text{node} = \text{trie}.\text{root}$$
 - Iteration 1:
-  - Since $\text{node}$ has a single child and is not a leaf, change $\text{node}$ to the single child
-  - $\text{prefix} = \epsilon + \text{node}.\text{value} = f$
+  - Since $$\text{node}$$ has a single child and is not a leaf, change $$\text{node}$$ to the single child
+  - $$\text{prefix} = \epsilon + \text{node}.\text{value} = f$$
 - Iteration 2:
-  - Since $\text{node}$ has a single child and is not a leaf, change $\text{node}$ to the single child
-  - $\text{prefix} = f + \text{node}.\text{value} = fl$
-- Since $\text{node}$ has more than one child, stop
-- Return $\text{prefix} = fl$
+  - Since $$\text{node}$$ has a single child and is not a leaf, change $$\text{node}$$ to the single child
+  - $$\text{prefix} = f + \text{node}.\text{value} = fl$$
+- Since $$\text{node}$$ has more than one child, stop
+- Return $$\text{prefix} = fl$$
 
 ### Time complexity
 
-The trie can be built in time $\mathcal{O}(S)$, where $S$ is defined same as above.
+The trie can be built in time $$\mathcal{O}(S)$$, where $$S$$ is defined same as above.
 
-In the worst-case, all $n$ strings are equal and have the same length $m$. Thus, $S=n*m$ and the trie will be traversed to a depth of $m$. This gives an overall worst-case time complexity of $\mathcal{O}(n*m)$.
+In the worst-case, all $$n$$ strings are equal and have the same length $$m$$. Thus, $$S=n*m$$ and the trie will be traversed to a depth of $$m$$. This gives an overall worst-case time complexity of $$\mathcal{O}(n*m)$$.
 
-The space complexity is $O(S)$.
+The space complexity is $$O(S)$$.
