@@ -29,12 +29,12 @@ If there is no common prefix, return an empty string `""`.
 
 ## Examples
 
-```block
+```
 Input: strs = ["flower","flow","flight"]
 Output: "fl"
 ```
 
-```block
+```
 Input: strs = ["dog","racecar","car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
@@ -75,7 +75,7 @@ If either are true, the algorithm can return.
 
 **Input**
 
-```block
+```
 strs = ["flower","flow","flight"]
 ```
 
@@ -196,7 +196,7 @@ def trie_insert(
 
 **Input**
 
-```block
+```
 strs = ["flower","flow","flight"]
 ```
 

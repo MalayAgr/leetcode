@@ -31,18 +31,18 @@ You can return the answer in any order.
 
 ## Examples
 
-```block
+```
 Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
 Explanation*: Because nums[0] + nums[1] == 9, we return [0, 1].
 ```
 
-```block
+```
 Input: nums = [3,2,4], target = 6
 Output: [1,2]
 ```
 
-```block
+```
 Input: nums = [3,3], target = 6
 Output: [0,1]
 ```
@@ -82,7 +82,7 @@ else:
 
 **Input**:
 
-```block
+```
 nums = [2, 7, 11, 5]
 target = 9
 ```
@@ -133,7 +133,7 @@ Since an element cannot be reused, the dictionary starts out as empty and the ch
 
 **Input**:
 
-```block
+```
 nums = [2, 7, 11, 5]
 target = 9
 ```

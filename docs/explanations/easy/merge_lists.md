@@ -25,17 +25,17 @@ Return the head of the merged linked list.
 
 ## Examples
 
-```block
+```
 Input: list1 = [1,2,4], list2 = [1,3,4]
 Output: [1,1,2,3,4,4]
 ```
 
-```block
+```
 Input: list1 = [], list2 = []
 Output: []
 ```
 
-```block
+```
 Input: list1 = [], list2 = [0]
 Output: [0]
 ```
@@ -91,7 +91,7 @@ Return $$\text{result}$$.
 
 **Input**
 
-```block
+```
 list1 = [1,2,4], list2 = [1,3,4]
 ```
 

@@ -37,12 +37,12 @@ For the purpose of this problem, we will return `0` when `needle` is an empty st
 
 ## Examples
 
-```block
+```
 Input: haystack = "hello", needle = "ll"
 Output: 2
 ```
 
-```block
+```
 Input: haystack = "aaaaa", needle = "bba"
 Output: -1
 ```
@@ -68,7 +68,7 @@ Return $$-1$$ by default.
 
 **Input**
 
-```block
+```
 haystack = "hello"
 needle = "ll"
 ```
@@ -191,7 +191,7 @@ Return $$-1$$ at the end.
 
 **Input**
 
-```block
+```
 haystack = "hello"
 needle = "ll"
 ```

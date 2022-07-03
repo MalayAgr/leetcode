@@ -26,17 +26,17 @@ Open brackets must be closed in the correct order.
 
 ## Examples
 
-```block
+```
 Input: s = "()"
 Output: true
 ```
 
-```block
+```
 Input: s = "()[]{}"
 Output: true
 ```
 
-```block
+```
 Input: s = "(]"
 Output: false
 ```
@@ -67,7 +67,7 @@ After the string is exhausted, return `True` if the stack is empty. Otherwise, r
 
 **Input**
 
-```block
+```
 s = ([]){}
 ```
 
