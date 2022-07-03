@@ -121,7 +121,6 @@ For example, let $$\text{pattern} = \text{ababaca}$$.
 The prefixes of $$\text{pattern}$$ are as shown:
 
 | $$\epsilon$$ | $$\text{a}$$ | $$\text{ab}$$ | $$\text{aba}$$ | $$\text{abab}$$ | $$\text{ababa}$$ | $$\text{ababac}$$ | $$\text{ababaca}$$ |
-|---|---|---|---|---|---|---|---|
 
 $$\pi$$ is as shown:
 

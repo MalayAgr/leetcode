@@ -81,7 +81,7 @@ val = 2
 **Procedure**
 
 - Since $$\text{nums}[-1] = 2$$, no exchange is required
-- \$$i = -1$$, $$k = 0$$
+- $$i = -1$$, $$k = 0$$
 - Iteration 1:
   - \$$j = 0$$
   - Since $$\text{nums}[0] = 0 \not = 2$$:
@@ -97,9 +97,9 @@ val = 2
     - Exchange $$\text{nums}[1]$$ with $$\text{nums}[1]$$
     - Now, $$\text{nums} = [0, 1, 2, 2, 3, 0, 4, 2]$$
 - Iteration 3:
-  - \$$j = 2$$ and since $$\text{nums}[2] = 2$$, continue
+  - $$j = 2$$ and since $$\text{nums}[2] = 2$$, continue
 - Iteration 4:
-  - \$$j = 3$$ and since $$\text{nums}[3] = 2$$, continue
+  - $$j = 3$$ and since $$\text{nums}[3] = 2$$, continue
 - Iteration 5:
   - \$$j = 4$$
   - Since $$\text{nums}[4] = 3 \not = 2$$:

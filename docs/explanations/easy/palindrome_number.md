@@ -98,7 +98,7 @@ x = 121
 
 **Procedure**
 
-- \$$reverse = 0$$ and $$\text{temp}_x = x = 121$$
+- $$reverse = 0$$ and $$\text{temp}_x = x = 121$$
 - Iteration 1:
   - \$$\text{remainder} = 121 \bmod 10 = 1$$
   - \$$\text{reverse} = 0 * 10 + 1 = 1$$

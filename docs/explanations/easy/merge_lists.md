@@ -91,9 +91,9 @@ list1 = [1,2,4], list2 = [1,3,4]
 
 **Procedure**
 
-- \$$\text{curr}_a = 1$$ and $$\text{curr}_b = 1$$
+- $$\text{curr}_a = 1$$ and $$\text{curr}_b = 1$$
 - Since neither is `None`, continue
-- \$$\text{result} = -1$$ and $$\text{curr}_{\text{res}} = -1$$
+- $$\text{result} = -1$$ and $$\text{curr}_{\text{res}} = -1$$
 - Iteration 1. Since $$\text{curr}_a.\text{val} = 1 \le \text{curr}_b.\text{val} = 1$$:
   - Set $$\text{curr}_{\text{res}}.\text{next} = 1$$
   - Set $$\text{curr}_{\text{res}} = \text{curr}_{\text{res}}.\text{next} = 1$$
