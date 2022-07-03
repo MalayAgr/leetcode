@@ -4,9 +4,10 @@ title: "Easy Problems"
 parent: "Explanations"
 nav_order: 1
 has_toc: false
+has_children: true
 ---
 
-# Solutions to Easy Problems
+# Explanations for Easy Problems
 
 - [Problem 1 - Two Sum](./easy/two_sum.md)
 - [Problem 2 - Palindrome Number](./easy/palindrome_number.md)
