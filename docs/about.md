@@ -1,18 +1,14 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi, I am Malay Agarwal!
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Comp Sc. Engineer • Deep Learning • Python • Reader • Occasional Writer • Math Enthusiast • Atheist •
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Follow me on social media:
 
+[Github](https://github.com/MalayAgr)
 
-[jekyll-organization]: https://github.com/jekyll
+[LinkedIn](https://www.linkedin.com/in/malayagr/)

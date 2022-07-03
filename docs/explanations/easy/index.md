@@ -7,7 +7,9 @@ has_toc: false
 has_children: true
 ---
 
-# Explanations for Easy Problems
+# <!-- omit in toc --> Explanations for Easy Problems
+
+## Problems
 
 - [Problem 1 - Two Sum](./two_sum.md)
 - [Problem 2 - Palindrome Number](./palindrome_number.md)
@@ -16,3 +18,5 @@ has_children: true
 - [Problem 5 - Valid Parentheses](./valid_parens.md)
 - [Problem 6 - Merge Two Sorted Lists](./merge_lists.md)
 - [Problem 7 - Remove Duplicates from Sorted Array](./remove_duplicates.md)
+- [Problem 8 - Remove Element](./remove_element.md)
+- [Problem 9 -  Implement strStr()](./str_str.md)
