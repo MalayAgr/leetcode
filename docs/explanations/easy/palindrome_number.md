@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 2 - Palindrome Number
 
 > Leetcode Link: [Palindrome Number](https://leetcode.com/problems/palindrome-number).

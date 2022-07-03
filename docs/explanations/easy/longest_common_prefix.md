@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 4 - Longest Common Prefix
 
 > Leetcode Link: [Longest Common Prefix](https://leetcode.com/submissions/detail/730808235/).

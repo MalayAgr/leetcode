@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 3 - Roman to Integer
 
 > Leetcode Link: [Roman to Integer](https://leetcode.com/problems/roman-to-integer/).

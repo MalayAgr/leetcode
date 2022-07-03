@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 7 - Remove Duplicates from Sorted Array
 
 > Leetcode Link: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/).

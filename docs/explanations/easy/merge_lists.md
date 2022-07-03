@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 6 - Merge Two Sorted Lists
 
 > Leetcode Link: [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/).

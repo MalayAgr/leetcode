@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 5 - Valid Parentheses
 
 > Leetcode Link: [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/).

@@ -1,12 +1,8 @@
 ---
 layout: default
-title: "Problem 1 - Two Sum"
-nav_order: 5
-parent: "Explanations"
+parent: "Easy Problems"
 has_toc: false
-usemathjax: true
 ---
-
 # <!-- omit in toc --> Problem 1 - Two Sum
 
 > Leetcode Link: [Two Sum](https://leetcode.com/problems/two-sum).

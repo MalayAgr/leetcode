@@ -1,3 +1,8 @@
+---
+layout: default
+parent: "Easy Problems"
+has_toc: false
+---
 # <!-- omit in toc --> Problem 9 - Implement strStr()
 
 > Leetcode Link: [Implement strStr()](https://leetcode.com/problems/implement-strstr/).
