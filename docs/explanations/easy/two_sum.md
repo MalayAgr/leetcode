@@ -147,7 +147,7 @@ target = 9
 - Iteration 1:
   - \$$a = 2$$
   - \$$b = 9 - 2 = 7$$
-  - \$$b$$ is not in dictionary
+  - $$b$$ is not in dictionary
   - Dictionary: $$\{2: 0\}$$
 - Iteration 2:
   - \$$a = 7$$
