@@ -26,6 +26,7 @@ remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 permalink: pretty
 
 defaults:
