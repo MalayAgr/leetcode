@@ -9,8 +9,8 @@ from .stack import Stack
 class TreeNode:
     def __init__(self, value: Any = None) -> None:
         self.value = value
-        self.left: TreeNode = None
-        self.right: TreeNode = None
+        self.left: TreeNode | None = None
+        self.right: TreeNode | None = None
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(value={self.value})"
