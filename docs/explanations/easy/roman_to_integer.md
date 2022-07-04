@@ -3,6 +3,7 @@ layout: default
 parent: Easy Problems
 grand_parent: Explanations
 has_toc: false
+nav_order: 3
 ---
 # <!-- omit in toc --> Problem 3 - Roman to Integer
 

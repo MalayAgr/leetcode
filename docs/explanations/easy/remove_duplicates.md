@@ -3,6 +3,7 @@ layout: default
 parent: Easy Problems
 grand_parent: Explanations
 has_toc: false
+nav_order: 7
 ---
 # <!-- omit in toc --> Problem 7 - Remove Duplicates from Sorted Array
 

@@ -3,6 +3,7 @@ layout: default
 parent: Easy Problems
 grand_parent: Explanations
 has_toc: false
+nav_order: 5
 ---
 # <!-- omit in toc --> Problem 5 - Valid Parentheses
 

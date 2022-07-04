@@ -3,6 +3,7 @@ layout: default
 parent: Easy Problems
 grand_parent: Explanations
 has_toc: false
+nav_order: 4
 ---
 # <!-- omit in toc --> Problem 4 - Longest Common Prefix
 
