@@ -20,3 +20,5 @@ has_children: true
 - [Problem 7 - Remove Duplicates from Sorted Array](./remove_duplicates.md)
 - [Problem 8 - Remove Element](./remove_element.md)
 - [Problem 9 -  Implement strStr()](./str_str.md)
+- [Problem 10 -  Search Insert Position](./search_insert.md)
+- [Problem 11 -  Length of Last Word](./length_last_word.md)
