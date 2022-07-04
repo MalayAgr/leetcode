@@ -23,6 +23,22 @@ class BinaryTree:
     def is_empty(self) -> bool:
         return self.root is None
 
+    def _is_equal(self, a: TreeNode, b: TreeNode) -> bool:
+        if a is None and b is None:
+            return True
+
+        if a is not None and b is not None:
+            return (
+                a.value == b.value
+                and self._is_equal(a.left, b.left)
+                and self._is_equal(a.right, b.right)
+            )
+
+        return False
+
+    def __eq__(self, other: BinaryTree) -> bool:
+        return self._is_equal(self.root, other.root)
+
     @classmethod
     def fromarray(cls, values: list[Any]) -> BinaryTree:
         nodes = [(TreeNode(value=val), None)[val is None] for val in values]
