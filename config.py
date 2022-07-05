@@ -47,6 +47,10 @@ nav_order: {{ number }}
 
 ### Example
 
+**Input**
+
+**Procedure**
+
 ### Time complexity
 {% else %}{% for i in (1..n_solutions) %}
 ## Solution {{ i }}
@@ -54,6 +58,10 @@ nav_order: {{ number }}
 ### Concept
 
 ### Example
+
+**Input**
+
+**Procedure**
 
 ### Time complexity
 {% endfor %}{% endif %}"""
