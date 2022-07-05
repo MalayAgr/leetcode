@@ -4,6 +4,7 @@ Solutions to problems on the online competitive platform, [LeetCode](https://lee
 
 - [Difficulty Level](#difficulty-level)
   - [Easy](#easy)
+  - [Medium](#medium)
 
 ## Difficulty Level
 
@@ -19,14 +20,17 @@ Solutions to problems on the online competitive platform, [LeetCode](https://lee
 - [Problem 8 - Remove Element](./src/easy/remove_element.py)
 - [Problem 9 - Implement strStr()](./src/easy/str_str.py)
 - [Problem 10 - Search Insert Position](./src/easy/search_insert.py)
-- [Problem 11 - Maximum Subarray](./src/easy/max_subarray.py)
-- [Problem 12 - Length of Last Word](./src/easy/length_last_word.py)
-- [Problem 13 - Plus One](./src/easy/plus_one.py)
-- [Problem 14 - Add Binary](./src/easy/add_binary.py)
-- [Problem 15 - Sqrt(x)](./src/easy/sqrt_x.py)
-- [Problem 16 - Climbing Stairs](./src/easy/climbing_stairs.py)
-- [Problem 17 - Remove Duplicates from Sorted List](./src/easy/remove_duplicates_list.py)
-- [Problem 18 - Merge Sorted Array](./src/easy/merge_lists.py)
-- [Problem 19 - Binary Tree Inorder Traversal](./src/easy/bt_inorder.py)
-- [Problem 20 - Same Tree](./src/easy/same_tree.py)
-- [Problem 21 - Symmetric Tree](./src/easy/symmetric_tree.py)
+- [Problem 11 - Length of Last Word](./src/easy/length_last_word.py)
+- [Problem 12 - Plus One](./src/easy/plus_one.py)
+- [Problem 13 - Add Binary](./src/easy/add_binary.py)
+- [Problem 14 - Sqrt(x)](./src/easy/sqrt_x.py)
+- [Problem 15 - Climbing Stairs](./src/easy/climbing_stairs.py)
+- [Problem 16 - Remove Duplicates from Sorted List](./src/easy/remove_duplicates_list.py)
+- [Problem 17 - Merge Sorted Array](./src/easy/merge_lists.py)
+- [Problem 18 - Binary Tree Inorder Traversal](./src/easy/bt_inorder.py)
+- [Problem 19 - Same Tree](./src/easy/same_tree.py)
+- [Problem 20 - Symmetric Tree](./src/easy/symmetric_tree.py)
+
+### Medium
+
+- [Problem 31 - Maximum Subarray](./src/easy/max_subarray.py)
