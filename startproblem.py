@@ -37,14 +37,14 @@ def startproblem(args: dict[str, Any]) -> None:
 
     filename = args["destination"] or "_".join(args["name"].lower().split())
 
-    path = filepath(filename=filename, diff=difficulty)
+    py_path = filepath(filename=filename, diff=difficulty)
 
-    with open(path, "w") as _:
+    with open(py_path, "w") as _:
         pass
 
-    path = filepath(filename=filename, diff=difficulty, py_file=False)
+    md_path = filepath(filename=filename, diff=difficulty, py_file=False)
 
-    with open(path, "w") as f:
+    with open(md_path, "w") as f:
         text = get_markdown_text(args)
         f.write(text)
 
