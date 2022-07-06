@@ -22,3 +22,8 @@ has_children: true
 - [Problem 9 -  Implement strStr()](./str_str.md)
 - [Problem 10 -  Search Insert Position](./search_insert.md)
 - [Problem 11 -  Length of Last Word](./length_last_word.md)
+- [Problem 12 - Plus One](./plus_one.md)
+- [Problem 13 - Add Binary](./add_binary.md)
+- [Problem 14 - Sqrt(x)](./sqrtx.md)
+- [Problem 15 - Climbing Stairs](./climbing_stairs.md)
+- [Problem 16 - Remove Duplicates from Sorted List](./remove_duplicates_list.md)

@@ -71,7 +71,7 @@ Since only the integer part is required, initialize $$\text{epsilon}$$ to the re
 In an infinite loop:
 
 - Set $$\text{prev}$$ to $$\text{root}$$ to store the previous value of $$\text{root}$$
-- Set $$\text{root}$$ to $$\frac{1}{2}(\text{root} + \frac{a}{\text{root}})$$
+- Set $$\text{root}$$ to $$\frac{1}{2}(\text{root} + \frac{x}{\text{root}})$$
 - If $$\lvert \text{prev} - \text{root} \rvert \le \text{epsilon}$$, return the integer part of $$\text{root}$$
 - Otherwise, continue
 

@@ -23,7 +23,7 @@ Solutions to problems on the online competitive platform, [LeetCode](https://lee
 - [Problem 11 - Length of Last Word](./src/easy/length_last_word.py)
 - [Problem 12 - Plus One](./src/easy/plus_one.py)
 - [Problem 13 - Add Binary](./src/easy/add_binary.py)
-- [Problem 14 - Sqrt(x)](./src/easy/sqrt_x.py)
+- [Problem 14 - Sqrt(x)](./src/easy/sqrtx.py)
 - [Problem 15 - Climbing Stairs](./src/easy/climbing_stairs.py)
 - [Problem 16 - Remove Duplicates from Sorted List](./src/easy/remove_duplicates_list.py)
 - [Problem 17 - Merge Sorted Array](./src/easy/merge_lists.py)
