@@ -35,7 +35,11 @@ def get_markdown_text(args: dict[str, Any]) -> str:
 def startproblem(args: dict[str, Any]) -> None:
     difficulty = args["difficulty"]
 
-    filename = args["destination"] or "_".join(args["name"].lower().split())
+    name: str = args["name"]
+    name = name.replace("(", "")
+    name = name.replace(")", "")
+
+    filename = args["destination"] or "_".join(name.lower().split())
 
     py_path = filepath(filename=filename, diff=difficulty)
 
