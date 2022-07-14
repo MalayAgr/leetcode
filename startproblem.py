@@ -22,11 +22,14 @@ def filepath(filename: str, diff: str = "E", *, py_file: bool = True) -> str:
 def get_markdown_text(args: dict[str, Any]) -> str:
     template = Template(cfg.TEMPLATE)
 
+    difficulty = cfg.DIFFICULTY_MAP[args["difficulty"]]
+
     context = {
         "name": args["name"],
         "number": args["number"],
         "link": args["link"],
         "n_solutions": args["n_solutions"],
+        "difficulty": difficulty.capitalize(),
     }
 
     return template.render(context)

@@ -8,7 +8,7 @@ EXPLANATIONS_DIR = os.path.join(".", "docs", "explanations")
 
 TEMPLATE = """---
 layout: default
-parent: Easy Problems
+parent: {{ difficulty }} Problems
 grand_parent: Explanations
 has_toc: false
 nav_order: {{ number }}
