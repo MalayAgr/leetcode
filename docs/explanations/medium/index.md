@@ -11,4 +11,4 @@ has_children: true
 
 ## Problems
 
-- [Problem 946 - Validate Stack Sequeneces](stack_sequence.md)
+- [Problem 946 - Validate Stack Sequeneces](./stack_sequence.md)
