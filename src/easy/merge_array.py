@@ -1,7 +1,7 @@
 import itertools
 
 
-def binary_search(nums, key, low, high):
+def binary_search(nums: list[int], key: int, low: int, high: int) -> int:
     while high >= low:
         mid = (high + low) // 2
 
@@ -16,7 +16,7 @@ def binary_search(nums, key, low, high):
     return high + 1
 
 
-def merge_sol1(nums1, m, nums2, n):
+def merge_sol1(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
     high = m - 1
     for num in nums2:
         idx = binary_search(nums1, key=num, low=0, high=high)
@@ -30,7 +30,7 @@ def merge_sol1(nums1, m, nums2, n):
         high += 1
 
 
-def merge_sol2(nums1, m, nums2, n):
+def merge_sol2(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
     if m + n == 0:
         return
 
@@ -58,6 +58,33 @@ def merge_sol2(nums1, m, nums2, n):
         k += 1
 
 
+def merge_sol3(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+    if m + n == 0:
+        return
+
+    j = -1
+
+    i1 = m
+    i2 = n
+
+    while i1 > 0 and i2 > 0:
+        a, b = nums1[i1 - 1], nums2[i2 - 1]
+
+        if a >= b:
+            nums1[j] = a
+            i1 -= 1
+        else:
+            nums1[j] = b
+            i2 -= 1
+
+        j -= 1
+
+    while i2 > 0:
+        nums1[j] = nums2[i2 - 1]
+        j -= 1
+        i2 -= 1
+
+
 if __name__ == "__main__":
     nums1 = [1, 2, 3, 0, 0, 0]
     m = 3
@@ -73,4 +100,12 @@ if __name__ == "__main__":
     n = 3
 
     merge_sol2(nums1=nums1, m=m, nums2=nums2, n=n)
+    print(nums1)
+
+    nums1 = [1, 2, 3, 0, 0, 0]
+    m = 3
+    nums2 = [2, 5, 6]
+    n = 3
+
+    merge_sol3(nums1=nums1, m=m, nums2=nums2, n=n)
     print(nums1)
