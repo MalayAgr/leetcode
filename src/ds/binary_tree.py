@@ -63,7 +63,7 @@ class BinaryTree:
 
         return tree
 
-    def preorder(self) -> Iterator[TreeNode | None]:
+    def preorder(self) -> Iterator[TreeNode]:
         if self.root is None:
             yield from ()
             return
@@ -81,7 +81,7 @@ class BinaryTree:
             if node.left is not None:
                 stack.push(node.left)
 
-    def inorder(self) -> Iterator[TreeNode | None]:
+    def inorder(self) -> Iterator[TreeNode]:
         if self.is_empty():
             yield from ()
             return
@@ -101,7 +101,7 @@ class BinaryTree:
 
             node = node.right
 
-    def postorder(self) -> Iterator[TreeNode | None]:
+    def postorder(self) -> Iterator[TreeNode]:
         if self.root is None:
             yield from ()
             return
