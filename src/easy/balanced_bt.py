@@ -6,9 +6,9 @@ sys.path.insert(0, "/media/malay_agr/Shared/Coding/Python/leetcode")
 from src.ds import AVLTree
 
 
-def sorted_array_to_bst(nums: list[int]):
+def sorted_array_to_bst(nums: list[int]) -> AVLTree:
     tree = AVLTree.fromarray(nums)
-    return tree.root
+    return tree
 
 
 if __name__ == "__main__":
@@ -16,15 +16,5 @@ if __name__ == "__main__":
 
     result = sorted_array_to_bst(nums=nums)
 
-    queue = deque()
-    queue.append(result)
-
-    while queue:
-        node = queue.pop()
+    for node in result.inorder():
         print(node.value)
-
-        if node.left is not None:
-            queue.append(node.left)
-
-        if node.right is not None:
-            queue.append(node.right)

@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
 from typing import Any
 
-from .binary_tree import TreeNode
+from .binary_tree import BinaryTree
 
 
-class AVLNode(TreeNode):
+class AVLNode:
     def __init__(self, value: Any = None) -> None:
         self.value = value
         self.left: AVLNode | None = None
@@ -17,9 +18,12 @@ class AVLNode(TreeNode):
         return f"{self.__class__.__name__}(val={self.value}, balance={self.balance})"
 
 
-class AVLTree:
+class AVLTree(BinaryTree):
     def __init__(self) -> None:
         self.root: AVLNode | None = None
+
+    def __eq__(self, other: AVLTree) -> bool:
+        return super().__eq__(other)
 
     @classmethod
     def fromarray(cls, arr: list[Any]) -> AVLTree:
@@ -169,3 +173,12 @@ class AVLTree:
             return
 
         return self._avl_fixup(ya, z)
+
+    def preorder(self) -> Iterator[AVLNode]:
+        return super().preorder()
+
+    def inorder(self) -> Iterator[AVLNode]:
+        return super().inorder()
+
+    def postorder(self) -> Iterator[AVLNode]:
+        return super().postorder()
