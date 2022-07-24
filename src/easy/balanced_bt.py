@@ -1,8 +1,3 @@
-import sys
-from collections import deque
-
-sys.path.insert(0, "/media/malay_agr/Shared/Coding/Python/leetcode")
-
 from src.ds import AVLTree
 
 
@@ -18,3 +13,4 @@ if __name__ == "__main__":
 
     for node in result.inorder():
         print(node.value)
+git 
