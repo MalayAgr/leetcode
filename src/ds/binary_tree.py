@@ -156,4 +156,4 @@ class BinaryTree:
 
     def is_balanced(self) -> bool:
         result = self._is_balanced_helper(self.root)
-        return result == -1
+        return result != -1
