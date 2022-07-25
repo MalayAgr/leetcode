@@ -134,3 +134,26 @@ class BinaryTree:
 
             if not stack:
                 break
+
+    def _is_balanced_helper(self, node: TreeNode) -> int:
+        if node is None:
+            return 0
+
+        l_height = self._is_balanced_helper(node.left)
+
+        if l_height == -1:
+            return -1
+
+        r_height = self._is_balanced_helper(node.right)
+
+        if r_height == -1:
+            return -1
+
+        if abs(l_height - r_height) > 1:
+            return -1
+
+        return 1 + max(l_height, r_height)
+
+    def is_balanced(self) -> bool:
+        result = self._is_balanced_helper(self.root)
+        return result == -1

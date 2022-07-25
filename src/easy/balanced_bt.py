@@ -13,4 +13,3 @@ if __name__ == "__main__":
 
     for node in result.inorder():
         print(node.value)
-git 
