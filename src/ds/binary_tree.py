@@ -1,29 +1,32 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
-from typing import Any
+from typing import Generic, TypeVar
 
 from .stack import Stack
 
+T1 = TypeVar("T1")
+T2 = TypeVar("T2")
 
-class TreeNode:
-    def __init__(self, value: Any = None) -> None:
+
+class TreeNode(Generic[T1]):
+    def __init__(self, value: T1 = None) -> None:
         self.value = value
-        self.left: TreeNode | None = None
-        self.right: TreeNode | None = None
+        self.left: TreeNode[T1] = None
+        self.right: TreeNode[T1] = None
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(value={self.value})"
 
 
-class BinaryTree:
+class BinaryTree(Generic[T2]):
     def __init__(self) -> None:
-        self.root: TreeNode = None
+        self.root: TreeNode[T2] = None
 
     def is_empty(self) -> bool:
         return self.root is None
 
-    def _is_equal(self, a: TreeNode, b: TreeNode) -> bool:
+    def _is_equal(self, a: TreeNode[T2], b: TreeNode[T2]) -> bool:
         if a is None and b is None:
             return True
 
@@ -36,11 +39,11 @@ class BinaryTree:
 
         return False
 
-    def __eq__(self, other: BinaryTree) -> bool:
+    def __eq__(self, other: BinaryTree[T2]) -> bool:
         return self._is_equal(self.root, other.root)
 
     @classmethod
-    def fromarray(cls, values: list[Any]) -> BinaryTree:
+    def fromarray(cls, values: list[T2]) -> BinaryTree[T2]:
         nodes = [(TreeNode(value=val), None)[val is None] for val in values]
         n = len(nodes)
 
@@ -63,12 +66,12 @@ class BinaryTree:
 
         return tree
 
-    def preorder(self) -> Iterator[TreeNode]:
+    def preorder(self) -> Iterator[TreeNode[T2]]:
         if self.root is None:
             yield from ()
             return
 
-        stack: Stack[TreeNode] = Stack()
+        stack: Stack[TreeNode[T2]] = Stack()
         stack.push(self.root)
 
         while stack:
@@ -81,14 +84,14 @@ class BinaryTree:
             if node.left is not None:
                 stack.push(node.left)
 
-    def inorder(self) -> Iterator[TreeNode]:
+    def inorder(self) -> Iterator[TreeNode[T2]]:
         if self.is_empty():
             yield from ()
             return
 
         node = self.root
 
-        stack: Stack[TreeNode] = Stack()
+        stack: Stack[TreeNode[T2]] = Stack()
 
         while node is not None or stack:
             if node is not None:
@@ -101,13 +104,13 @@ class BinaryTree:
 
             node = node.right
 
-    def postorder(self) -> Iterator[TreeNode]:
+    def postorder(self) -> Iterator[TreeNode[T2]]:
         if self.root is None:
             yield from ()
             return
 
         node = self.root
-        stack: Stack[TreeNode] = Stack()
+        stack: Stack[TreeNode[T2]] = Stack()
 
         while True:
             while node is not None:
@@ -135,7 +138,7 @@ class BinaryTree:
             if not stack:
                 break
 
-    def _is_balanced_helper(self, node: TreeNode) -> int:
+    def _is_balanced_helper(self, node: TreeNode[T2]) -> int:
         if node is None:
             return 0
 
