@@ -21,7 +21,7 @@ class AVLNode(Generic[T1]):
         return f"{self.__class__.__name__}(val={self.value}, balance={self.balance})"
 
 
-class AVLTree(Generic[T2], BinaryTree):
+class AVLTree(BinaryTree, Generic[T2]):
     def __init__(self) -> None:
         self.root: AVLNode[T2] = None
 
@@ -175,7 +175,9 @@ class AVLTree(Generic[T2], BinaryTree):
             ya.balance = 0
             return
 
-        return self._avl_fixup(ya, z)
+        self._avl_fixup(ya, z)
+
+        return z
 
     def preorder(self) -> Iterator[AVLNode[T2]]:
         return super().preorder()
